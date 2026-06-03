@@ -1,4 +1,12 @@
 .codex/
+.DS_Store
+.idea/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.jekyll-cache/
+_site/
+dist/
+sitegen.egg-info/

@@ -1,4 +1,4 @@
-name: joshuaalbert_py
+name: astrophysical_discovery_py
 channels:
   - conda-forge
 dependencies:
@@ -9,4 +9,3 @@ dependencies:
       - markdown-it-py>=3.0
       - Pillow>=10.0
       - pytest>=8.0
-
