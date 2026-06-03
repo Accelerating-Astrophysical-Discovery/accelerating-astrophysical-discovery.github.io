@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ site.title }}{% endblock %}
+{% block body_class %}landing-page{% endblock %}
+{% block chrome %}{% endblock %}
+{% block content %}
+  <section class="landing defocus-scope" aria-label="Site sections">
+    <h1 class="defocus-item">{{ site.title }}</h1>
+    <a class="landing-link defocus-item" href="/consortium/">Consortium</a>
+    <a class="landing-link defocus-item" href="/news/">News</a>
+    <a class="landing-link defocus-item" href="/members/">Members</a>
+  </section>
+{% endblock %}

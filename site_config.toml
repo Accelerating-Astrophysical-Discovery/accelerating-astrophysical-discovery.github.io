@@ -1,0 +1,10 @@
+[site]
+title = "Accelerating Astrophysical Discovery with Foundation Models"
+base_url = "https://accelerating-astrophysical-discovery.github.io"
+
+[giscus]
+repo = ""
+repo_id = ""
+category = "Announcements"
+category_id = ""
+theme = "noborder_light"

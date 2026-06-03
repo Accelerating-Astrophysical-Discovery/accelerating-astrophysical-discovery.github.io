@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ site.title }}{% endblock %}</title>
+    <meta name="color-scheme" content="light">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+    {% block head %}{% endblock %}
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle>
+      <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+    </button>
+    {% block chrome %}
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/consortium/" {% if active == "consortium" %}aria-current="page"{% endif %}>Consortium</a>
+        <a href="/news/" {% if active == "news" %}aria-current="page"{% endif %}>News</a>
+        <a href="/members/" {% if active == "members" %}aria-current="page"{% endif %}>Members</a>
+      </nav>
+    {% endblock %}
+    <main id="content">
+      {% block content %}{% endblock %}
+    </main>
+    <script src="/assets/katex/katex.min.js" defer></script>
+    <script src="/assets/katex/auto-render.min.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

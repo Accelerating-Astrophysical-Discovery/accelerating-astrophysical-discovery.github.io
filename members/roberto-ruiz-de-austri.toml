@@ -1,0 +1,6 @@
+name = "Roberto Ruiz de Austri"
+last_name = "Ruiz de Austri"
+join_date = "2026-01-03"
+affiliations = ["IFIC", "CSIC", "Universidad de Valencia"]
+research_areas = ["Particle physics", "Astroparticle physics", "Physics-informed inference"]
+bio = "Roberto contributes particle- and astroparticle-physics expertise, grounding the workshop roadmap in problems where multimessenger evidence and physical constraints are central."

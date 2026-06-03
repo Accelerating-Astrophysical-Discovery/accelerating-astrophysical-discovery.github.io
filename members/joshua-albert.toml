@@ -1,0 +1,6 @@
+name = "Joshua G. Albert"
+last_name = "Albert"
+join_date = "2026-01-01"
+affiliations = ["California Institute of Technology", "Leiden Observatory"]
+research_areas = ["Machine learning", "Computational physics", "Astrophysical foundation models"]
+bio = "Joshua works on machine learning and computational physics, with a focus on building the open-science roadmap for specialised foundation models that can reason over multimodal astrophysical data."

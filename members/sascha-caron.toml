@@ -1,0 +1,6 @@
+name = "Sascha Caron"
+last_name = "Caron"
+join_date = "2026-01-05"
+affiliations = ["Radboud University", "Nikhef"]
+research_areas = ["Machine learning in physics", "Fundamental physics", "Scientific AI"]
+bio = "Sascha develops and applies machine learning methods across fundamental physics, helping shape the technical and collaboration plan for open, physics-aware foundation models."
