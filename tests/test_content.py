@@ -25,6 +25,12 @@ class ContentTests(unittest.TestCase):
         source = "![eqn](https://latex.codecogs.com/svg.latex?x&space;=&space;y)\n"
         self.assertEqual(codecogs_to_latex(source), "\\[\nx = y\n\\]")
 
+    def test_markdown_tables_render_as_tables(self) -> None:
+        source = "| Time | Focus |\n| --- | --- |\n| 9:30 | Talk slot |\n"
+        html = render_markdown(source)
+        self.assertIn("<table>", html)
+        self.assertIn("<td>9:30</td>", html)
+
     def test_collect_writings_sorts_newest_then_alpha(self) -> None:
         with TemporaryDirectory() as temp:
             root = Path(temp)

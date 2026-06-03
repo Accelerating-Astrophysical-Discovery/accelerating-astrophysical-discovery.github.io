@@ -2,7 +2,7 @@
 
 It intentionally supports only the syntax this site needs for generated pages:
 headings, paragraphs, lists, links, images, emphasis, inline code, fenced code,
-raw HTML blocks, and KaTeX delimiters in text.
+tables, raw HTML blocks, and KaTeX delimiters in text.
 """
 
 from __future__ import annotations
@@ -51,7 +51,7 @@ def _render_markdown_inner(text: str) -> str:
     """Render a conservative subset of Markdown to HTML."""
     text = _strip_kramdown_image_attrs(text)
     protected, math_tokens = _stash_math(text)
-    html_output = MarkdownIt("commonmark", {"html": True}).render(protected)
+    html_output = MarkdownIt("commonmark", {"html": True}).enable("table").render(protected)
     return _restore_math(html_output, math_tokens)
 
     lines = text.splitlines()
