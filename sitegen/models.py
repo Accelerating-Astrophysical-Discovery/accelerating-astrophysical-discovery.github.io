@@ -47,7 +47,8 @@ class TextEntry:
 
     @property
     def comment_term(self) -> str:
-        return f"[{self.kind}/comments] {self.comment_id}"
+        kind = "consortium" if self.kind == "research" else self.kind
+        return f"[{kind}/comments] {self.comment_id}"
 
     def to_dict(self) -> dict[str, Any]:
         return {

@@ -26,7 +26,7 @@ class GiscusConfig:
     repo_id: str = ""
     category: str = "Comments"
     category_id: str = ""
-    theme: str = "noborder_light"
+    theme: str = "light"
 
     @property
     def configured(self) -> bool:
@@ -58,8 +58,10 @@ class Writing:
             kind = "news"
         elif self.section == "essays":
             kind = "essay"
+        elif self.section == "research":
+            kind = "consortium"
         else:
-            kind = "research"
+            kind = self.section
         return f"[{kind}/comments] {self.comment_id}"
 
     @property
@@ -202,7 +204,7 @@ def load_config(root: Path, production: bool = False) -> SiteConfig:
             repo_id=str(giscus_data.get("repo_id", "")),
             category=str(giscus_data.get("category", "Comments")),
             category_id=str(giscus_data.get("category_id", "")),
-            theme=str(giscus_data.get("theme", "noborder_light")),
+            theme=str(giscus_data.get("theme", "light")),
         ),
     )
     if production and not config.giscus.configured:

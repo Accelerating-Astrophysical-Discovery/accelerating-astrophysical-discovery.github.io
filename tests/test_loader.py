@@ -26,7 +26,7 @@ class LoaderTests(unittest.TestCase):
             self.assertIn(r"\(x=1\)", manifest.research[0].html)
             self.assertEqual(
                 manifest.research[0].comment_term,
-                "[research/comments] research/paper",
+                "[consortium/comments] research/paper",
             )
 
     def test_strict_validation_reports_missing_pairs_invalid_dates_and_duplicates(self) -> None:

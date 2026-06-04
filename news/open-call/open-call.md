@@ -11,27 +11,38 @@
     </div>
     <div>
       <dt>Registration</dt>
-      <dd><a href="https://www.lorentzcenter.nl:443/registration-closed.html">Registration page</a> · <a href="https://www.lorentzcenter.nl/accelerating-astrophysical-discovery-with-foundation-models.html">Official workshop page</a></dd>
+      <dd><a href="https://www.lorentzcenter.nl/accelerating-astrophysical-discovery-with-foundation-models.html">Register via the Lorentz Center workshop page</a></dd>
+    </div>
+    <div>
+      <dt>Focus</dt>
+      <dd>Use cases and evaluation on Monday; joint-representation model design for the rest of the week</dd>
     </div>
   </dl>
 </section>
 
-We are forming a long-term open-science collaboration to build specialised astrophysical foundation models: systems that can reason over multimodal and multimessenger physical data, help detect rare events, connect observations with simulations, and support collaborative scientific discovery.
+We are inviting participants to join a focused Lorentz Center workshop on building the scientific and technical basis for AI-accelerated astrophysical discovery.
 
-The workshop will bring together researchers from astrophysics, particle physics, computational physics, and artificial intelligence, including participants from academia and industry. The aim is not just to discuss promising ideas, but to leave with a practical roadmap, curated dataset plans, implementation tickets, and a collaboration structure that can continue after the week in Leiden.
+The consortium has two goals: to design how future astrophysicists and cosmologists will do science in collaboration with AI, and to build a joint-representation foundation model that understands heterogeneous physical data. The model should support embeddings for serendipity and retrieval, generative inference across linked observations and simulations, and agentic scientific workflows guided by human judgement.
+
+The week will stay deliberately narrow. Monday will define shared vocabulary, flagship use cases, and evaluation targets. The rest of the week will focus on the joint-representation model: the relevancy graph, tokenisation implications, long-context architecture, training protocol, MVP scope, funding, and post-workshop roadmap.
 
 ## Who should join
 
-We are especially interested in contributors who can help with:
+We are especially interested in contributors who bring:
 
-- scientific use cases for anomaly detection, multimodal reconstruction, simulation initialisation, or agentic scientific exploration;
-- data curation across radio, optical, infrared, X-ray, gamma-ray, gravitational-wave, neutrino, catalogue, simulation, language, code, or provenance sources;
-- tokenisation and representation schemes for heterogeneous physical data;
-- model training, inference, alignment, monitoring, and long-context systems;
-- open-source infrastructure, governance, funding strategy, and collaboration design.
+- concrete astrophysical or cosmological discovery workflows;
+- expertise in multimodal data, simulations, instruments, archives, or provenance;
+- experience with representation learning, generative models, long-context systems, agentic AI, uncertainty, or evaluation;
+- interest in open-source infrastructure, governance, funding, and sustained collaboration.
 
 ## Expected outputs
 
-By the end of the workshop we aim to have KPA team one-pagers, dataset and tokenisation specs, a first use case for each Key Project Area, a GitHub-backed backlog, and initial hackathon code that can seed post-workshop development. In the following months, the collaboration will work toward curated datasets, an MVP defined by the workshop use cases, a white paper, and follow-on funding.
+By Friday we aim to leave with:
+
+- selected use cases with explicit evaluation targets;
+- a Relevancy Graph v0 for the required data relationships;
+- an Architecture and Training Protocol v0 for the model;
+- an MVP backlog, hackathon artifacts, and named owners;
+- a consortium roadmap for funding, governance, and follow-up work.
 
 For logistics, registration status, and organiser contact details, use the [official Lorentz Center workshop page](https://www.lorentzcenter.nl/accelerating-astrophysical-discovery-with-foundation-models.html).

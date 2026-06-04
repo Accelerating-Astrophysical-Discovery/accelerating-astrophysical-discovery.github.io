@@ -32,4 +32,4 @@ The generator validates content strictly, renders Markdown to HTML, keeps LaTeX 
 
 giscus can provide GitHub-backed comments and reactions through Discussions after it is configured for the workshop repository. Production builds require the repo, repo ID, category, and category ID in `site_config.toml`.
 
-Before comments work publicly, enable GitHub Pages from Actions, enable Discussions on the site repository, install the giscus GitHub App for that repository, create a `Comments` discussion category, and copy the generated category ID into `site_config.toml`. Until then, normal builds deploy the site with a placeholder comments message; `python scripts/build_site.py --production` remains the strict giscus readiness check.
+Before comments work publicly, enable GitHub Pages from Actions, enable Discussions on the site repository, install the giscus GitHub App for that repository, create or select the `Announcements` discussion category, and copy the generated category ID into `site_config.toml`. Until then, normal builds deploy the site with a placeholder comments message; `python scripts/build_site.py --production` remains the strict giscus readiness check.

@@ -3,8 +3,8 @@ title = "Accelerating Astrophysical Discovery with Foundation Models"
 base_url = "https://accelerating-astrophysical-discovery.github.io"
 
 [giscus]
-repo = ""
-repo_id = ""
+repo = "Accelerating-Astrophysical-Discovery/accelerating-astrophysical-discovery.github.io"
+repo_id = "R_kgDOSwLFJA"
 category = "Announcements"
-category_id = ""
-theme = "noborder_light"
+category_id = "DIC_kwDOSwLFJM4C-cFG"
+theme = "light"
