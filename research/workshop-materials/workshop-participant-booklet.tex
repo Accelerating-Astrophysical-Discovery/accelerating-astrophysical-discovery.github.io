@@ -1,0 +1,418 @@
+\documentclass[9pt,a5paper,twoside]{extarticle}
+
+\usepackage[inner=13mm,outer=11mm,top=13mm,bottom=15mm,headheight=12pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{hyperref}
+\usepackage{xurl}
+\graphicspath{{../../news/lorentz-center-poster-brief/}{news/lorentz-center-poster-brief/}}
+
+\definecolor{Night}{HTML}{071A2B}
+\definecolor{DeepBlue}{HTML}{123B5D}
+\definecolor{Sky}{HTML}{3D8EAF}
+\definecolor{Aqua}{HTML}{6EC5CB}
+\definecolor{Gold}{HTML}{E5AD55}
+\definecolor{Mist}{HTML}{EDF5F7}
+\definecolor{Cloud}{HTML}{F7FAFB}
+\definecolor{Ink}{HTML}{142632}
+\definecolor{Muted}{HTML}{526775}
+\definecolor{Divider}{HTML}{CAD9DE}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=DeepBlue,
+  urlcolor=DeepBlue,
+  pdftitle={Workshop Participant Booklet — Accelerating Astrophysical Discovery with Foundation Models},
+  pdfauthor={Accelerating Astrophysical Discovery consortium},
+  pdfsubject={Lorentz Center workshop, 14--18 September 2026}
+}
+
+\color{Ink}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlist[itemize]{leftmargin=4mm,itemsep=2pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=5mm,itemsep=2pt,topsep=2pt}
+\emergencystretch=1.5em
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\scriptsize\color{Muted}ACCELERATING ASTROPHYSICAL DISCOVERY}
+\fancyhead[RO]{\scriptsize\color{Muted}PARTICIPANT BOOKLET · SEPTEMBER 2026}
+\fancyfoot[LE,RO]{\scriptsize\color{Muted}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\eyebrow}[1]{%
+  {\small\bfseries\color{Sky}\MakeUppercase{#1}}\par\vspace{2mm}}
+
+\newcommand{\pagetitle}[2]{%
+  \eyebrow{#1}%
+  {\fontsize{20}{22}\selectfont\bfseries\color{Night}#2\par}%
+  \vspace{3mm}%
+  {\color{Gold}\rule{18mm}{1.4pt}}\par\vspace{4mm}}
+
+\newcommand{\kpanumber}[1]{%
+  \tikz[baseline=(char.base)]{%
+    \node[circle,fill=DeepBlue,text=white,font=\bfseries\small,inner sep=2.2pt] (char) {#1};}}
+
+\newtcolorbox{infobox}[1][]{
+  enhanced,
+  colback=Mist,
+  colframe=Mist,
+  boxrule=0pt,
+  borderline west={2.2pt}{0pt}{Sky},
+  arc=1.5mm,
+  left=3.5mm,right=3.5mm,top=3mm,bottom=3mm,
+  #1
+}
+
+\newtcolorbox{darkbox}[1][]{
+  enhanced,
+  colback=Night,
+  colframe=Night,
+  coltext=white,
+  boxrule=0pt,
+  arc=1.5mm,
+  left=4mm,right=4mm,top=3.5mm,bottom=3.5mm,
+  #1
+}
+
+\newcommand{\dayheader}[4]{%
+  \eyebrow{#1 · #3}%
+  {\fontsize{18}{20}\selectfont\bfseries\color{Night}#2\par}%
+  \vspace{2.5mm}
+  \begin{infobox}
+    \textbf{Deliverable}\quad #4
+  \end{infobox}
+  \vspace{2mm}
+}
+
+\newcommand{\slot}[3]{%
+  \textbf{#1} & \textbf{#2}\if\relax\detokenize{#3}\relax\else\par\vspace{-1pt}{\scriptsize\color{Muted}#3}\fi\\
+  \arrayrulecolor{Divider}\midrule
+}
+
+\newenvironment{scheduletable}{%
+  \renewcommand{\arraystretch}{1.16}%
+  \rowcolors{2}{Cloud}{white}%
+  \tabularx{\linewidth}{@{\hspace{1mm}}>{\raggedright\arraybackslash\color{DeepBlue}}p{23mm} >{\raggedright\arraybackslash}X@{\hspace{1mm}}}
+  \rowcolor{DeepBlue}\color{white}\bfseries Time & \color{white}\bfseries Session\\
+  \arrayrulecolor{DeepBlue}\midrule
+}{%
+  \endtabularx
+}
+
+\begin{document}
+
+% Cover
+\thispagestyle{empty}
+\hypersetup{pageanchor=false}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[Night] (current page.south west) rectangle (current page.north east);
+  \node[anchor=north,inner sep=0pt] at (current page.north) {%
+    \includegraphics[width=\paperwidth]{joint-human-ai-discovery.png}};
+  \fill[shade,left color=Night!95,right color=DeepBlue!92]
+    (current page.south west) rectangle ([yshift=-104.8mm]current page.north east);
+  \node[anchor=north west,text width=124mm,align=left]
+    at ([xshift=12mm,yshift=-112mm]current page.north west) {%
+      {\small\bfseries\color{Aqua}LORENTZ CENTER WORKSHOP\par}
+      \vspace{4mm}
+      {\fontsize{24}{27}\selectfont\bfseries\color{white}
+        Accelerating Astrophysical\par Discovery\par}
+      \vspace{1mm}
+      {\fontsize{15}{18}\selectfont\color{white!86}
+        with Foundation Models\par}
+      \vspace{5mm}
+      {\large\bfseries\color{Gold}Participant booklet\par}
+      \vspace{4mm}
+      {\small\color{white!86}14--18 September 2026\quad·\quad Leiden, The Netherlands\par}
+    };
+\end{tikzpicture}
+\null\newpage
+
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
+\pagetitle{Welcome}{A week built for making}
+
+Dear Lorentz Workshop participant,
+
+In a little over a month, we will meet in Leiden for an interactive week devoted to pushing the bounds of how we study the cosmos. We want the workshop to turn diverse expertise into shared decisions, concrete artifacts, and collaborations that continue after Friday.
+
+This booklet introduces the consortium's ambition, explains the four Key Problem Areas (KPAs), lays out the working timetable, and suggests a few things to think about before you arrive. You do not need polished proposals. Bring concrete examples, informed questions, and a willingness to build across disciplinary boundaries.
+
+\begin{darkbox}
+  {\bfseries\color{Gold}AT A GLANCE}\par\vspace{2mm}
+  \begin{tabularx}{\linewidth}{@{}>{\bfseries\color{Aqua}}p{25mm}X@{}}
+    Workshop & Accelerating Astrophysical Discovery with Foundation Models\\[2mm]
+    Dates & Monday 14 to Friday 18 September 2026\\[2mm]
+    Venue & Lorentz Center@omega, Leiden, The Netherlands\\[2mm]
+    Start times & Monday at 10:00; Tuesday--Friday at 9:30\\
+  \end{tabularx}
+\end{darkbox}
+
+\vfill
+{\small\color{Muted}The working style is closer to an open-source project hackathon than a sequence of lectures: short framing talks, focused working sessions, plenary synthesis, and a named deliverable each day.}
+\newpage
+
+\pagetitle{The consortium}{Two connected pillars}
+
+\begin{tcolorbox}[enhanced,colback=DeepBlue,colframe=DeepBlue,coltext=white,boxrule=0pt,arc=2mm,left=5mm,right=5mm,top=5mm,bottom=5mm]
+  {\large\bfseries\color{Gold}PILLAR 01}\par\vspace{2mm}
+  {\Large\bfseries Design science for human--AI collaboration}\par\vspace{3mm}
+  The first goal is to design how future astrophysicists and cosmologists will do science in collaboration with AI. This is more than adding chat interfaces to existing tools. It means redesigning workflows so humans, reasoning language models, simulators, archives, instruments, and foundation models can jointly form hypotheses, retrieve evidence, run checks, update beliefs, and communicate results.
+\end{tcolorbox}
+
+\vspace{4mm}
+
+\begin{tcolorbox}[enhanced,colback=Mist,colframe=Mist,boxrule=0pt,arc=2mm,left=5mm,right=5mm,top=5mm,bottom=5mm,borderline west={2.5pt}{0pt}{Gold}]
+  {\large\bfseries\color{Sky}PILLAR 02}\par\vspace{2mm}
+  {\Large\bfseries\color{Night}Build a joint representation of physical data}\par\vspace{3mm}
+  The second goal is to build the technical substrate: a model that learns across observations, simulations, synthetic observations, language, code, and instrumental context. It should support meaningful embeddings for retrieval and serendipity, along with generative capabilities for conditional inference across linked views of the same physical system.
+\end{tcolorbox}
+
+\vfill
+\begin{infobox}
+  \textbf{One shared ambition.} The two pillars meet in an agentic discovery system: reasoning models guide scientific work, the joint-representation model grounds that work in physical evidence, and humans remain responsible for judgement.
+\end{infobox}
+\newpage
+
+\pagetitle{Key Problem Areas}{KPAs 1 and 2}
+
+The KPAs are not four separate projects. They are four tests of whether a shared model can understand astrophysical data well enough to accelerate discovery.
+
+\vspace{2mm}
+\begin{tcolorbox}[enhanced,colback=Cloud,colframe=Divider,boxrule=.5pt,arc=1.5mm,left=4mm,right=4mm,top=4mm,bottom=4mm]
+  {\large\bfseries\color{Night}\kpanumber{1}\quad Serendipity through embeddings}\par\vspace{2mm}
+  A physically meaningful embedding space can surface rare objects, surprising analogues, counterexamples, and neighbouring evidence a scientist may not know to request.
+
+  \textbf{Workshop question}\quad Can it find scientifically meaningful candidates faster and more reliably than current workflows?
+
+  \textbf{Evidence of progress}\quad Positive controls, rare-class retrieval, synthetic anomalies, baseline comparisons, and expert review.
+\end{tcolorbox}
+
+\vspace{4mm}
+\begin{tcolorbox}[enhanced,colback=Cloud,colframe=Divider,boxrule=.5pt,arc=1.5mm,left=4mm,right=4mm,top=4mm,bottom=4mm]
+  {\large\bfseries\color{Night}\kpanumber{2}\quad Generative inference across instruments}\par\vspace{2mm}
+  Instruments see the universe through different resolutions, cadences, noise, coverage, and selection effects. Conditional generation may connect those views through super-resolution, deconfusion, gap filling, missing-modality prediction, or cross-instrument reconstruction.
+
+  \textbf{Workshop question}\quad Is the generated view supported by evidence, rather than merely plausible-looking?
+
+  \textbf{Evidence of progress}\quad Controlled degradation, held-out modalities, calibrated uncertainty, forward-model checks, and classical baselines.
+\end{tcolorbox}
+
+\vfill
+{\small\color{Muted}\textbf{Scientific standard:} useful generative inference must expose what is observed, what is assumed, what remains uncertain, and how the output can be checked.}
+\newpage
+
+\pagetitle{Key Problem Areas}{KPAs 3 and 4}
+
+\begin{tcolorbox}[enhanced,colback=Cloud,colframe=Divider,boxrule=.5pt,arc=1.5mm,left=4mm,right=4mm,top=4mm,bottom=4mm]
+  {\large\bfseries\color{Night}\kpanumber{3}\quad Observations to physical states}\par\vspace{2mm}
+  Multimodal observations could constrain candidate physical states or simulation initial conditions. Candidate states are evolved through system and instrument simulators, then compared back to observations.
+
+  \textbf{Workshop question}\quad Do forward runs remain physically admissible and observationally consistent?
+
+  \textbf{Evidence of progress}\quad Forward-model consistency, stable physical structure, residual analysis, uncertainty, and an auditable chain of assumptions.
+\end{tcolorbox}
+
+\vspace{3mm}
+\begin{tcolorbox}[enhanced,colback=Cloud,colframe=Divider,boxrule=.5pt,arc=1.5mm,left=4mm,right=4mm,top=4mm,bottom=4mm]
+  {\large\bfseries\color{Night}\kpanumber{4}\quad Human--machine discovery}\par\vspace{2mm}
+  This is the workflow lens: how should scientists, reasoning language models, tools, simulators, archives, and the joint-representation model form, test, revise, and communicate hypotheses together?
+
+  \textbf{Workshop question}\quad Does the combined workflow improve search, triage, hypothesis generation, validation, or communication without hiding uncertainty or responsibility?
+\end{tcolorbox}
+
+\vspace{3mm}
+\begin{darkbox}
+  {\bfseries\color{Gold}THE RELEVANCY GRAPH}\par\vspace{1.5mm}
+  Data become useful together when we know \emph{why} they belong together: the same source, sky region, or time window; a simulation-to-observation forward model; an instrument response; shared code provenance; or workflow lineage. That graph connects scientific intent to model design and model outputs back to accountability.
+\end{darkbox}
+\newpage
+
+\pagetitle{Before Leiden}{Bring ingredients, not finished answers}
+
+\begin{tcolorbox}[enhanced,colback=DeepBlue,colframe=DeepBlue,coltext=white,boxrule=0pt,arc=2mm,left=5mm,right=5mm,top=4.5mm,bottom=4.5mm]
+  {\large\bfseries\color{Gold}ASTROPHYSICS + COMPUTATIONAL PHYSICS}\par\vspace{2mm}
+  Think about use cases where AI could help humans study the cosmos and do better science if it could understand, reason about, and generate physical data.
+
+  Prepare a list of astrophysical data you can access. Any modality is welcome, including:
+  \begin{itemize}[label=\textcolor{Aqua}{\textbullet}]
+    \item observations, catalogues, spectra, images, time series, and event lists;
+    \item simulation code, snapshots, initial conditions, and synthetic observations;
+    \item multimodal observations of the same systems;
+    \item instrument responses, calibration context, uncertainties, and provenance.
+  \end{itemize}
+\end{tcolorbox}
+
+\vspace{4mm}
+\begin{tcolorbox}[enhanced,colback=Mist,colframe=Mist,boxrule=0pt,arc=2mm,left=5mm,right=5mm,top=4.5mm,bottom=4.5mm,borderline west={2.5pt}{0pt}{Gold}]
+  {\large\bfseries\color{DeepBlue}AI + COMPUTATIONAL INFRASTRUCTURE}\par\vspace{2mm}
+  Think about the architectural challenges facing a joint-representation model that must learn deep, self-supervised representations of large physical datasets.
+
+  Also consider the infrastructure required to train across physical datasets that can dwarf the data used to train language models:
+  \begin{itemize}[label=\textcolor{Sky}{\textbullet}]
+    \item long context, heterogeneous tokenisation, and shared latent spaces;
+    \item compute-to-data training across distributed archives and HPC systems;
+    \item data access, preprocessing, provenance, monitoring, and validation;
+    \item staged scaling, simulator-backed synthetic data, and failure modes.
+  \end{itemize}
+\end{tcolorbox}
+
+\vfill
+{\small\color{Muted}If you span both groups, bring both perspectives. If you span neither exactly, bring the constraints, examples, and questions from your own domain.}
+\newpage
+
+\pagetitle{The week}{One chain of daily deliverables}
+
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\color{DeepBlue}}p{20mm} >{\raggedright\arraybackslash}p{38mm} X@{}}
+  \toprule
+  Day & Focus & Main deliverable\\
+  \midrule
+  Monday & Vocabulary, use cases, evaluation & Shared Vocabulary and Discovery-Evaluation Map v0\\
+  \addlinespace[1mm]
+  Tuesday & Data, representation, provenance & Relevancy Graph v0 for selected use cases\\
+  \addlinespace[1mm]
+  Wednesday & Architecture and training & Architecture and Training Protocol v0\\
+  \addlinespace[1mm]
+  Thursday & MVP and hackathon & MVP Implementation Plan and Hackathon Artifacts v0\\
+  \addlinespace[1mm]
+  Friday & Roadmap, governance, funding & Consortium Roadmap and Funding Package v0\\
+  \bottomrule
+\end{tabularx}
+
+\vspace{5mm}
+\begin{darkbox}
+  {\bfseries\color{Gold}THE HAND-OFF}\par\vspace{2mm}
+  Monday chooses what matters. Tuesday defines the relationships the data and system must respect. Wednesday turns those constraints into a model and training path. Thursday turns that design into workstreams and artifacts. Friday gives the work owners, resources, governance, and continuity.
+\end{darkbox}
+
+\vspace{4mm}
+\begin{infobox}
+  \textbf{Working rhythm}\quad Each day combines brief framing talks, small-group work, plenary synthesis, and a closeout that confirms the artifact and its owners. Coffee breaks and lunches are part of the programme: use them to connect ideas across disciplines.
+\end{infobox}
+
+\vfill
+{\small\color{Muted}Formal working hours are 10:00--16:30 on Monday, 9:30--17:00 Tuesday--Thursday, and 9:30--13:30 on Friday.}
+\newpage
+
+\dayheader{Monday}{Use cases and discovery workflows}{10:00--16:30}{Shared Vocabulary and Discovery-Evaluation Map v0}
+
+\begin{scheduletable}
+  \slot{10:00--10:30}{Kickoff talk}{Shared vocabulary for AI-accelerated discovery.}
+  \slot{10:30--11:00}{Coffee break}{}
+  \slot{11:00--12:00}{Use-case working session}{Draft cards covering workflow, roles, data, capability, and evidence of success.}
+  \slot{12:00--13:30}{Lunch}{}
+  \slot{13:30--14:00}{Afternoon talk}{Frame KPAs 1--4 as testable capabilities.}
+  \slot{14:00--14:30}{Refine use cases}{Choose mechanisms and a small set of flagship cases.}
+  \slot{14:30--15:00}{Coffee break}{}
+  \slot{15:00--16:15}{Define evaluation targets}{Controls, baselines, anomaly tests, forward checks, uncertainty, provenance, and human review.}
+  \slot{16:15--16:30}{Closeout}{Confirm vocabulary, cases, evaluations, and artifact owners.}
+  \slot{16:30 onward}{Welcome reception}{Informal continuation after the formal programme.}
+\end{scheduletable}
+
+\vfill
+\begin{infobox}
+  \textbf{Keep asking}\quad What would count as evidence that this workflow produces better science, rather than simply more output?
+\end{infobox}
+\newpage
+
+\dayheader{Tuesday}{Data, representation, and provenance}{9:30--17:00}{Relevancy Graph v0 for Monday's selected use cases}
+
+\begin{scheduletable}
+  \slot{9:30--10:00}{Kickoff talk}{The training corpus as a relevancy graph.}
+  \slot{10:00--10:30}{Map data objects}{Connect use cases to observations, simulations, instruments, code, and provenance.}
+  \slot{10:30--11:00}{Coffee break}{}
+  \slot{11:00--12:00}{Define the graph}{Agree node types, edge types, metadata, provenance, and ambiguities.}
+  \slot{12:00--13:30}{Lunch}{}
+  \slot{13:30--14:00}{Afternoon talk}{Tokenising heterogeneous physical data.}
+  \slot{14:00--14:30}{Tokenisation implications}{Units, scale, locality, order, uncertainty, missingness, modality, and context.}
+  \slot{14:30--15:00}{Coffee break}{}
+  \slot{15:00--16:30}{Plenary synthesis}{Build Relevancy Graph v0 and extract architecture constraints.}
+  \slot{16:30--17:00}{Closeout}{Confirm owners and open decisions.}
+\end{scheduletable}
+
+\vfill
+\begin{infobox}
+  \textbf{Keep asking}\quad What relationship makes these objects scientifically relevant to one another, and what provenance must survive every transformation?
+\end{infobox}
+\newpage
+
+\dayheader{Wednesday}{Long-context architecture and training}{9:30--17:00}{Architecture and Training Protocol v0}
+
+\begin{scheduletable}
+  \slot{9:30--10:00}{Kickoff talk}{Long-context architectures for multimodal physics.}
+  \slot{10:00--10:30}{Translate graph constraints}{Preserve typed objects, relationships, units, uncertainty, and metadata.}
+  \slot{10:30--11:00}{Coffee break}{}
+  \slot{11:00--12:00}{Sketch architecture families}{Encoders, shared representations, retrieval, generative heads, simulators, and tool interfaces.}
+  \slot{12:00--13:30}{Lunch}{}
+  \slot{13:30--14:00}{Afternoon talk}{Training protocol and compute-to-data deployment.}
+  \slot{14:00--14:30}{Define training objectives}{Alignment, reconstruction, prediction, generation, forward consistency, and uncertainty.}
+  \slot{14:30--15:00}{Coffee break}{}
+  \slot{15:00--16:30}{Stage the training path}{Seed corpus, synthetic data, access, preprocessing, validation, scaling, and risks.}
+  \slot{16:30--17:00}{Closeout}{Confirm the architecture, protocol, open decisions, and owners.}
+  \slot{17:00--20:00}{Workshop dinner}{Informal continuation after the formal programme.}
+\end{scheduletable}
+\newpage
+
+\dayheader{Thursday}{MVP architecture and hackathon}{9:30--17:00}{MVP Implementation Plan and Hackathon Artifacts v0}
+
+\begin{scheduletable}
+  \slot{9:30--10:00}{Kickoff talk}{Turn the week's artifacts into MVP workstreams.}
+  \slot{10:00--10:30}{Define MVP scope}{Select the smallest credible system, graph, data, architecture, and evaluations.}
+  \slot{10:30--11:00}{Coffee break}{}
+  \slot{11:00--12:00}{Workstreams and backlog}{Name owners; write issues with acceptance criteria and links to use cases.}
+  \slot{12:00--13:30}{Lunch}{}
+  \slot{13:30--14:00}{Hackathon checkpoint}{Set the integration target across model, data, and evaluation.}
+  \slot{14:00--14:30}{Hackathon sprint 1}{Schemas, manifests, examples, evaluation specs, prototypes, or CI.}
+  \slot{14:30--15:00}{Coffee break}{}
+  \slot{15:00--16:00}{Hackathon sprint 2}{Continue implementation and integration.}
+  \slot{16:00--16:30}{Integration review}{Report repository artifacts, gaps, and next owners.}
+  \slot{16:30--17:00}{Closeout}{Finalise the plan, backlog, owners, and next technical meeting.}
+\end{scheduletable}
+
+\vfill
+{\small\color{Muted}\textbf{Thursday rule:} every artifact should connect to a use case, a model capability, and an evaluation target.}
+\newpage
+
+\dayheader{Friday}{Roadmap, governance, and funding}{9:30--13:30}{Consortium Roadmap and Funding Package v0}
+
+\begin{scheduletable}
+  \slot{9:30--10:00}{Kickoff talk}{Compute, data access, and funding an open foundation-model effort.}
+  \slot{10:00--10:30}{Map resource needs}{Compute, data, simulators, archives, expertise, funding, and missing roles.}
+  \slot{10:30--11:00}{Coffee break}{}
+  \slot{11:00--11:30}{Funding and partnerships}{Identify opportunities, partners, institutional support, and lead owners.}
+  \slot{11:30--12:00}{Roadmap closeout}{Confirm milestones, working groups, owners, cadence, and invitees.}
+  \slot{12:00--13:30}{Closing lunch}{Final confirmations and departures.}
+\end{scheduletable}
+
+\vspace{4mm}
+\begin{darkbox}
+  {\bfseries\color{Gold}PRACTICAL MATTERS}\par\vspace{2mm}
+  Discounted hotel reservations are limited, so please book as soon as possible if you need accommodation.
+
+  For practical questions or help with accommodation, contact Maria Krebbers at
+  \href{mailto:acceleratingastrophysical@lorentzcenter.nl}{acceleratingastrophysical@lorentzcenter.nl}.
+\end{darkbox}
+
+\vfill
+\begin{center}
+  {\small\bfseries\color{DeepBlue}accelerating-astrophysical-discovery.github.io}\par
+  \vspace{2mm}
+  {\scriptsize\color{Muted}Bring a use case. Bring a constraint. Leave with something we can build together.}
+\end{center}
+
+\end{document}
