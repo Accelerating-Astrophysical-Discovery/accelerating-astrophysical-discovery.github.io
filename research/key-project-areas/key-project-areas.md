@@ -1,4 +1,4 @@
-The proposal defines four Key Problem Areas (KPAs). They are not four separate projects. They are four tests of one shared ambition: a joint-representation foundation model that can understand astrophysical data well enough to accelerate discovery.
+The proposal starts with four Key Problem Areas (KPAs). They are a working framework, not four separate projects or a closed list. A central goal of the Leiden workshop is to test whether they frame the right scientific problems and to refine, combine, replace, or add KPAs as the discussions and use cases demand.
 
 The model must learn across observations, simulations, synthetic observations, language, code, and instrumental context. It should answer two linked questions: what evidence belongs together, and what can be inferred or generated from that evidence?
 
@@ -44,24 +44,24 @@ The joint-representation model supplies grounded embeddings and generative physi
 
 The test is whether the combined workflow improves scientific search, triage, hypothesis generation, validation, or communication while preserving uncertainty, negative results, provenance, and decision points.
 
-## Why the relevancy graph matters
+## The relevancy graph
 
-The relevancy graph is not only a way to organise training data. It is part of the scientific infrastructure needed when papers become less central as the primary scientific object.
+The relevancy graph is envisioned as a large graph database whose nodes are physical data and whose links encode relevancy between those data. A node might contain or reference an image, spectrum, event list, time series, simulation state, synthetic observation, or instrument response. A link records that two nodes are relevant to one another and why.
 
-Papers are human summaries. The durable objects of future scientific work are results, hypotheses, computations, data products, simulations, protocols, and the relationships between them. A cutout, spectrum, catalogue row, alert, simulation snapshot, synthetic observation, instrument response, result identifier, hypothesis, notebook, and code commit may all speak to the same physical question.
+Text already provides a natural structure for self-supervision. In autoregressive language modelling, tokens are ordered in a sequence and a causal attention mask allows each token to attend to the tokens that came before it. Physical data do not have one universal left-to-right ordering. An image, spectrum, event list, time series, simulation state, and instrument response may all describe related parts or views of a physical system without forming a single sequence.
 
-The relevancy graph records why those objects belong together: same source, same sky region, same time window, generated from, degraded from, derived from, conditioned on an instrument response, forward-modelled from, produced by code, used in a computation, evidence for a hypothesis, or part of a workflow.
+The relevancy graph supplies this more general attentional field. An image and spectrum may be linked because they observe the same source. A synthetic observation may be linked to the simulation state and instrument response that produced it. Events may be connected by sky position and time, while different spatial or temporal scales may have their own relationships. These connections can be bidirectional, many-to-many, cross-modal, hierarchical, or probabilistic.
 
-This graph is the bridge from scientific intent to model design and from model outputs back to scientific accountability. It tells the model what should be compared, what can be generated from what, and what audit trail must remain attached to any claim.
+During self-supervised training, the system samples connected data from this database and turns the relevant part of the graph into an attention mask. The mask determines which data can attend to one another as the model predicts, reconstructs, or aligns withheld physical information. The graph database is therefore both the structure of the training corpus and the training topology: it replaces an arbitrary ordering of physical data with an attentional field grounded in their actual relationships.
 
-## What the KPAs define
+## A framework to refine
 
-The KPAs define the scientific contract for the joint-representation model. They specify what the model must make easier to find, what it must be able to infer, what physical constraints it must respect, and how it should be used inside a human-machine discovery workflow.
+The current KPAs make the consortium's starting assumptions concrete enough to examine. The workshop should determine what the joint-representation model must make easier to find, what it must be able to infer, which physical constraints it must respect, and how it should be used inside a human-machine discovery workflow. The resulting framework may retain these four areas, reshape them, or introduce others.
 
-That contract turns the model from a generic multimodal system into a scientific instrument. It implies:
+The refined framework should help turn the model from a generic multimodal system into a scientific instrument. It may imply:
 
 - embedding objectives for serendipity and retrieval;
 - generative objectives for cross-instrument and simulator-backed inference;
 - validation targets that separate supported inference from plausible completion;
-- an auditable relevancy graph connecting data, context, computations, hypotheses, models, and claims;
+- a large relevancy graph database whose connectivity becomes the attention mask for self-supervised learning;
 - an LLM-guided interface that keeps human judgement, uncertainty, and provenance visible.

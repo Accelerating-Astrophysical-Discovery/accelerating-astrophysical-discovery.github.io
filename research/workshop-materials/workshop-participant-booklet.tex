@@ -17,7 +17,7 @@
 \tcbuselibrary{breakable,skins}
 \usepackage{hyperref}
 \usepackage{xurl}
-\graphicspath{{../../news/lorentz-center-poster-brief/}{news/lorentz-center-poster-brief/}}
+\graphicspath{{./}{research/workshop-materials/}{../../news/lorentz-center-poster-brief/}{news/lorentz-center-poster-brief/}}
 
 \definecolor{Night}{HTML}{071A2B}
 \definecolor{DeepBlue}{HTML}{123B5D}
@@ -154,7 +154,7 @@ Dear Lorentz Workshop participant,
 
 In a little over a month, we will meet in Leiden for an interactive week devoted to pushing the bounds of how we study the cosmos. We want the workshop to turn diverse expertise into shared decisions, concrete artifacts, and collaborations that continue after Friday.
 
-This booklet introduces the consortium's ambition, explains the four Key Problem Areas (KPAs), lays out the working timetable, and suggests a few things to think about before you arrive. You do not need polished proposals. Bring concrete examples, informed questions, and a willingness to build across disciplinary boundaries.
+This booklet introduces the consortium's ambition, explains the initial working set of four Key Problem Areas (KPAs), lays out the working timetable, and suggests a few things to think about before you arrive. You do not need polished proposals. Bring concrete examples, informed questions, and a willingness to build across disciplinary boundaries.
 
 \begin{darkbox}
   {\bfseries\color{Gold}AT A GLANCE}\par\vspace{2mm}
@@ -249,7 +249,7 @@ This booklet introduces the consortium's ambition, explains the four Key Problem
 
 \pagetitle{Key Problem Areas}{KPAs 1 and 2}
 
-The KPAs are not four separate projects. They are four tests of whether a shared model can understand astrophysical data well enough to accelerate discovery.
+The four KPAs are a starting framework, not a fixed list. A central workshop goal is to test whether they frame the right scientific problems---and to refine, combine, replace, or add KPAs as our discussions and use cases demand.
 
 \vspace{2mm}
 \begin{tcolorbox}[enhanced,colback=Cloud,colframe=Divider,boxrule=.5pt,arc=1.5mm,left=4mm,right=4mm,top=4mm,bottom=4mm]
@@ -296,8 +296,14 @@ The KPAs are not four separate projects. They are four tests of whether a shared
 
 \vspace{3mm}
 \begin{darkbox}
-  {\bfseries\color{Gold}THE RELEVANCY GRAPH}\par\vspace{1.5mm}
-  Data become useful together when we know \emph{why} they belong together: the same source, sky region, or time window; a simulation-to-observation forward model; an instrument response; shared code provenance; or workflow lineage. That graph connects scientific intent to model design and model outputs back to accountability.
+  \begin{minipage}[t]{0.35\linewidth}
+    \vspace{0pt}\includegraphics[width=\linewidth]{relevancy-graph.png}\par\vspace{1mm}
+    {\fontsize{6.7}{7.7}\selectfont\color{white!65}Nodes are physical data; relevancy links become the training-time attention mask.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.60\linewidth}
+    \vspace{0pt}{\bfseries\color{Gold}THE RELEVANCY GRAPH}\par\vspace{1.5mm}
+    We envision a large graph database whose nodes are physical data and whose links encode relevancy. Unlike text, whose sequence yields a causal mask, physical data have no universal order. During self-supervised training, sampled graph connectivity becomes the attention mask. It defines a more general attentional field---cross-modal, many-to-many, and hierarchical---within which the model predicts, reconstructs, or aligns withheld data.
+  \end{minipage}
 \end{darkbox}
 \newpage
 

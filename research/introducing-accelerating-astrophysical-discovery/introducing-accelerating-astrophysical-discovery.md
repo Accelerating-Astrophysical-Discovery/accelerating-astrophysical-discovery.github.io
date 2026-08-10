@@ -28,16 +28,18 @@ In an AI-native scientific workflow, the central objects are hypotheses, evidenc
 
 Scientific infrastructure faces a similar transition. Our papers, archives, code, provenance records, review systems, and collaboration norms were built for human-only workflows. AI systems can already read and generate language, but science requires more than language. It requires traceable relationships between data, hypotheses, simulations, instruments, uncertainty, and claims. We need scientific infrastructure that lets humans and machines reason together without blurring responsibility.
 
-## Physical data has a special kind of truth
+## Physical data needs its own structure
 
-**Cosmological and astrophysical data have a truth-bearing character that is unique to physical data.** A galaxy image, a gravitational-wave strain segment, a spectrum, a catalogue row, or a simulation snapshot is not just text. It is evidence about a physical world constrained by geometry, dynamics, instrumentation, uncertainty, and consistency across views.
+Astrophysical data are heterogeneous and relational. A galaxy image, gravitational-wave strain segment, spectrum, catalogue row, simulation snapshot, or instrument response may describe a shared physical system, but these data do not form one natural sequence. Their relationships can depend on source, position, time, scale, measurement process, simulation history, and provenance.
 
-This matters for AI. Language gives composability of concepts. Physical data gives grounding. Together, they may enable systems that generalise in a way ordinary language-only models cannot: by learning not only how concepts relate, but how evidence, measurement, simulation, and physical law constrain those concepts.
+This matters for AI because the structure used to learn from physical data must express those relationships. Language contributes composable concepts; physical data grounds them in evidence, measurement, simulation, uncertainty, and physical constraints. A useful joint representation must learn across both.
 
 ## The role of the joint-representation model
 
 The joint-representation model is the bridge between these ideas. It should learn when different data products refer to the same physical situation, when they are informative about one another, and when a generated completion is physically admissible rather than merely plausible.
 
-The relevancy graph is central. It records why data products belong together: same sky region, same source, same time window, instrument response, simulation-to-observation forward model, code provenance, or workflow lineage. That graph tells the model what should be compared, what can be generated from what, and what audit trail must remain attached to any claim.
+We envision the relevancy graph as a large graph database in which nodes are physical data and links encode relevancy between them: the same source, sky region, time window, physical scale, instrument response, simulation-to-observation path, or provenance relationship. It is designed as training structure, not merely as a catalogue of associations.
+
+In autoregressive language modelling, token order supplies a causal attention mask. Physical data have no universal left-to-right ordering, so self-supervised training needs a more general attentional field. When the system samples connected data from the graph, that connectivity becomes the attention mask: it determines which data can attend to one another while the model predicts, reconstructs, or aligns withheld physical information.
 
 The long-term aim is an agentic discovery system in which reasoning LLMs guide retrieval, tool use, hypothesis generation, simulation, validation, and communication, while the joint-representation model provides grounded physical understanding. Humans remain responsible for scientific judgement, but they work with systems that can search, connect, and test evidence at a scale no individual can manage.
