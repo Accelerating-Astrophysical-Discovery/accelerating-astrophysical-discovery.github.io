@@ -236,7 +236,7 @@
     var state = {
       panelOpen: false,
       enabled: false,
-      playing: true,
+      playing: false,
       index: 0,
       wpm: 300,
       wpg: 3,
@@ -399,7 +399,7 @@
       if (enabled) {
         clearReturnHighlight();
         setIndexFromSelection();
-        state.playing = true;
+        state.playing = false;
       } else {
         clearTimer();
       }
