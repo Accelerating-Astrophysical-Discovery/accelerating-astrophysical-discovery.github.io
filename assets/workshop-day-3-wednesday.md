@@ -25,18 +25,15 @@ This should include:
 
 | Time | Activity |
 | --- | --- |
-| 9:30-10:00 | Morning kickoff talk: **Long-context architectures for multimodal physics.** Cover retrieval, memory, sparse or hierarchical context, modality-specific encoders, shared latent spaces, generative heads, and how a model can reason over data products that cannot all fit into one naive context window. |
-| 10:00-10:30 | Groups translate the Relevancy Graph v0 into architecture constraints. What must the architecture preserve from the graph: typed objects, typed relationships, physical units, coordinates, uncertainty, provenance, missingness, instrument metadata, and simulator metadata? |
+| 9:30-10:00 | Kickoff and overnight review: **Architectures for multimodal physics.** Review the primer and overnight graph work; build from basic concepts to long context, recurrent depth, graph-derived attention, modality-specific encoders, shared representations, generative heads, and simulator conditioning. |
+| 10:00-10:30 | Translate the Relevancy Graph v0 into architecture constraints. What must the architecture preserve: typed objects and relationships, physical units, coordinates, uncertainty, provenance, missingness, instrument metadata, and simulator metadata? |
 | 10:30-11:00 | Coffee break |
-| 11:00-11:30 | Groups sketch architecture options: modular encoders plus shared representation, retrieval-augmented multimodal model, generative heads, simulator-conditioned components, LLM/tool interface, or staged hybrids. |
-| 11:30-12:00 | Groups define representation objectives: what should be close in embedding space, what should be separable, what linked observations should predict, what provenance should remain traceable, and what uncertainty should be represented. |
+| 11:00-12:00 | Architecture working session. Groups use AI to research and sketch candidate architecture families, representation objectives, and training hypotheses tied to Tuesday's graph. |
 | 12:00-13:30 | Lunch |
-| 13:30-14:00 | Afternoon kickoff talk: **Training protocol and compute-to-data deployment.** Cover how to bring compute to data as much as possible, how to train across distributed archives and HPC environments, and how to stage the path from small controlled corpora to a large multimodal training run. |
-| 14:00-14:30 | Groups define training objectives: contrastive alignment, masked or reconstruction objectives, cross-modal prediction, conditional generation, forward-model consistency, provenance-aware supervision, and uncertainty-aware evaluation. |
+| 13:30-14:30 | Plenary architecture synthesis. Compare candidate designs, identify common components and disagreements, and keep multiple hypotheses where the evidence does not yet justify convergence. |
 | 14:30-15:00 | Coffee break |
-| 15:00-15:45 | Groups define the staged training protocol: seed corpus, controlled paired datasets, simulator-backed synthetic data, data access model, preprocessing, validation splits, monitoring, scaling path, and compute assumptions. |
-| 15:45-16:30 | Plenary synthesis. Compare architecture options and converge on the Architecture and Training Protocol v0 outline. |
-| 16:30-17:00 | Closeout. Assign owners for architecture sketch, training objectives, compute-to-data plan, open decisions, and risk list. |
+| 15:00-16:30 | Training protocol and prototype brief. Define alignment, reconstruction, cross-modal prediction, conditional generation, simulator feedback, validation, compute-to-data deployment, staged scaling, risks, and the starter artifacts needed for Thursday. |
+| 16:30-17:00 | Closeout and overnight AI brief. Confirm architecture hypotheses, the training protocol, owners, and the prototype code or artifacts the AI should prepare overnight. |
 
 ## Architecture and Training Protocol v0 Template
 
@@ -57,3 +54,5 @@ The Wednesday artifact should include:
 - Separate near-term MVP architecture from long-term foundation-model ambition.
 - Make compute-to-data constraints explicit.
 - Do not let fine-tune vs from-scratch dominate unless the discussion is tied to concrete stages and data constraints.
+- Calibrate the kickoff for a mixed audience: establish basic vocabulary before introducing state-of-the-art options.
+- Treat every architecture as a hypothesis to test against the graph and evaluation targets.

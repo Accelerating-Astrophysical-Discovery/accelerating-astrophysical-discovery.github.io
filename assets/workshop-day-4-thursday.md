@@ -24,18 +24,15 @@ This should include:
 
 | Time | Activity |
 | --- | --- |
-| 9:30-10:00 | Morning kickoff talk: **From model design to MVP backlog.** Summarise the selected use cases, evaluation targets, Relevancy Graph v0, tokenisation implications, architecture options, and training protocol. Translate them into implementation workstreams. |
-| 10:00-10:30 | Define MVP scope. The group agrees on the smallest credible system to build first: selected use cases, required data types, minimal graph schema, first architecture path, and first evaluation targets. |
+| 9:30-10:00 | Kickoff and overnight review: **From the week's design to an MVP.** Summarise Monday-Wednesday, inspect the overnight prototype, state the smallest credible target, and share practical AI-assisted coding approaches. |
+| 10:00-10:30 | Self-organise workstreams. Participants choose a concrete data/graph, tokenisation, architecture, training, evaluation, infrastructure, documentation/white-paper, or roadmap/funding artifact and name an owner. |
 | 10:30-11:00 | Coffee break |
-| 11:00-11:30 | Create workstreams and owners: data/provenance, tokenisation, relevancy graph schema, model architecture, training protocol, simulator/instrument interfaces, evaluation, agentic workflow, infrastructure/CI, documentation, and white-paper support. |
-| 11:30-12:00 | Draft issue backlog. Each issue should include acceptance criteria and a link to the relevant use case, model capability, or evaluation target. |
+| 11:00-12:00 | Open hackathon I. Build toy-scale artifacts in the main room or breakouts; create issues and acceptance criteria as the work becomes concrete. |
 | 12:00-13:30 | Lunch |
-| 13:30-14:00 | Afternoon kickoff talk: **Hackathon checkpoint: integrating model, data, and evaluation artifacts.** Set the integration target: every artifact should connect back to a use case, a model capability, and an evaluation target. |
-| 14:00-14:30 | Hackathon sprint 1. Groups work on repo artifacts: schemas, manifests, example records, tokenisation examples, evaluation specs, issue templates, lightweight prototype code, or CI/CD setup. |
+| 13:30-14:30 | Open hackathon II. Continue building and integrating artifacts, with immediate demonstrations whenever something starts to work. |
 | 14:30-15:00 | Coffee break |
-| 15:00-16:00 | Hackathon sprint 2. Continue implementation, with facilitators checking that work stays tied to the MVP scope. |
-| 16:00-16:30 | Integration review. Each workstream reports what now exists in the repo, what remains unresolved, and what the next owner must do. |
-| 16:30-17:00 | Closeout. Finalise the MVP Implementation Plan v0, issue backlog, owner list, and next technical meeting. |
+| 15:00-16:15 | Show-and-tell and integration. Demonstrate code and designs, connect each artifact to a use case and evaluation target, and identify what remains unresolved. |
+| 16:15-17:00 | Closeout and Friday handoff. Finalise the artifact inventory, issue backlog, owners, next technical work, and the funding or governance questions Friday must resolve. |
 
 ## Hackathon Artifact Menu
 
@@ -59,3 +56,5 @@ Useful Thursday artifacts include:
 - Reject issues without acceptance criteria.
 - Keep artifacts connected to Monday use cases and evaluation targets.
 - Make ownership explicit before the day ends.
+- Let participants self-organise, but make sure non-coding work on the white paper, roadmap, funding, or documentation also produces a concrete artifact.
+- Use live show-and-tell throughout the day and reserve the final part of the afternoon for synthesis.

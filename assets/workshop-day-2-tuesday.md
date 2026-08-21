@@ -20,24 +20,21 @@ This should include:
 - known ambiguities, including probabilistic crossmatches, uncertain time or sky associations, simulator domain gaps, inconsistent calibration, and incomplete provenance;
 - architecture constraints implied by the graph.
 
-This deliverable should not assume a graph database, query language, or implementation architecture. It should define the data relationships the model and system must respect.
+The consortium envisions a large graph database, but this deliverable should define the scientific relationships and training role before committing to a query language or storage implementation.
 
 ## Timetable
 
 | Time | Activity |
 | --- | --- |
-| 9:30-10:00 | Morning kickoff talk: **The training corpus as a relevancy graph.** Introduce the idea that data, tokenisation, and provenance are coupled. Explain node types, relationship types, and why relationships should carry physical and procedural meaning. |
-| 10:00-10:30 | Working groups map the selected Monday use cases to required data objects. Start from the use-case cards and list the observations, catalogues, simulations, synthetic observations, instrument responses, language, code, and provenance records needed. |
+| 9:30-10:00 | Kickoff and overnight review: **The training corpus as a relevancy graph.** Correct Monday's AI-assisted synthesis, explain how graph connectivity becomes the training attention mask, and introduce tokenisation challenges alongside current multimodal examples. |
+| 10:00-10:30 | Working groups map Monday's selected use cases to participants' dataset lists: observations, catalogues, simulations, synthetic observations, instrument responses, language, code, and provenance records. |
 | 10:30-11:00 | Coffee break |
-| 11:00-11:30 | Define node types. Groups identify the minimum useful node types and required metadata for each. |
-| 11:30-12:00 | Define relevancy edge types. Groups identify relationships such as same sky region, same source, same time window, generated from, degraded from, derived from, forward-modelled from, conditioned on instrument response, produced by code, and supported by paper or workflow lineage. |
+| 11:00-12:00 | Graph working session. Groups define node types, relevancy links, metadata, provenance, ambiguities, and what the connectivity should mean during self-supervised training. |
 | 12:00-13:30 | Lunch |
-| 13:30-14:00 | Afternoon kickoff talk: **Tokenising heterogeneous physical data.** Cover representation choices for images, event lists, spectra, time series, catalogues, simulations, language, code, and provenance records. |
-| 14:00-14:30 | Groups define tokenisation implications. For each node and edge type, identify what the representation must preserve: units, scale, locality, ordering, uncertainty, missingness, modality, provenance, and physical context. |
+| 13:30-14:30 | Plenary graph synthesis. Groups share their proposals and assemble the common Relevancy Graph v0 for Monday's use cases. |
 | 14:30-15:00 | Coffee break |
-| 15:00-15:45 | Groups document known ambiguities and risks: uncertain associations, probabilistic crossmatches, synthetic-to-real transfer, inconsistent units, calibration differences, missing provenance, and access constraints. |
-| 15:45-16:30 | Plenary synthesis. Build the shared Relevancy Graph v0 outline and agree on the minimum schema needed for Wednesday. |
-| 16:30-17:00 | Closeout. Assign owners for writing the node types, edge types, metadata fields, ambiguities, and architecture constraints into the repo. |
+| 15:00-16:30 | Tokenisation and architecture constraints. For each node and link type, identify what representations must preserve: units, scale, locality, ordering, uncertainty, missingness, modality, provenance, and physical context. Record ambiguities and constraints for Wednesday. |
+| 16:30-17:00 | Closeout and overnight AI brief. Assign owners and commission a draft graph schema or prototype plus a one- or two-page architecture vocabulary primer. |
 
 ## Relevancy Graph v0 Template
 
@@ -59,3 +56,5 @@ The Tuesday artifact should include:
 - Keep the graph grounded in Monday's selected use cases.
 - Make provenance mandatory, not an afterthought.
 - Keep tokenisation at the level needed to inform architecture. Full tokeniser implementation is not Tuesday's goal.
+- Treat the graph as training topology: sampled connectivity supplies a general attention mask for physical data.
+- End with a reviewed prompt for the overnight schema/prototype and Wednesday primer.

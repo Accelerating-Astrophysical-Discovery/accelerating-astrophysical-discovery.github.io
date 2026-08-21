@@ -23,17 +23,14 @@ This should include:
 
 | Time | Activity |
 | --- | --- |
-| 10:00-10:30 | Morning kickoff talk: **Shared vocabulary for AI-accelerated discovery.** Align on the meanings of joint representation, embeddings, conditional generation, simulator-backed data, long context, agentic workflow, provenance, validation, and human judgement. |
-| 10:30-11:00 | Coffee break |
-| 11:00-11:30 | Use-case card setup. Facilitators introduce the card template and split participants into working groups. |
-| 11:30-12:00 | Working groups draft candidate use-case cards. Each card must state the scientific workflow, human role, machine role, required data, required model capability, and proposed evaluation target. |
+| 09:00-10:00 | Arrival and coffee. The building is open; the formal programme begins at 10:00. |
+| 10:00-10:30 | Kickoff talk: **AI-first Science 2.0.** Introduce the two consortium pillars, the live AI-assisted working method, and the KPAs as a starting framework that the workshop may refine, combine, replace, or extend. |
+| 10:30-12:00 | Science 2.0 and use-case working session. Groups imagine future scientific workflows, work backwards toward near-term opportunities, and draft candidate use-case cards. Each card must state the human role, machine role, required data, model capability, and evidence of success. |
 | 12:00-13:30 | Lunch |
-| 13:30-14:00 | Afternoon kickoff talk: **KPAs as testable model capabilities.** Connect use cases to embeddings for KPA 1, generative reconstruction for KPA 2, simulator-backed observation-to-simulation mappings for KPA 3, and LLM-guided collaboration for KPA 4. |
-| 14:00-14:30 | Groups refine use-case cards around explicit mechanisms: embedding search, conditional generation, simulator conditioning, long-context retrieval, or agentic tool use. |
+| 13:30-14:30 | Plenary synthesis and selection. Groups share their visions and candidate use cases; AI assists with identifying overlaps and disagreements; the plenary selects 3-5 flagship cases. |
 | 14:30-15:00 | Coffee break |
-| 15:00-15:45 | Groups define evaluation targets for each flagship case: positive controls, baseline comparisons, synthetic anomaly tests, forward-model consistency checks, uncertainty labels, provenance requirements, and human review points. |
-| 15:45-16:15 | Plenary selection of 3-5 flagship use cases. The group chooses the cases that will drive Tuesday-Friday. |
-| 16:15-16:30 | Closeout. Confirm vocabulary, selected use cases, out-of-scope items, and owners for writing the Monday artifact into the repo. |
+| 15:00-16:15 | Define evaluation targets for each flagship case: positive controls, baseline comparisons, synthetic anomaly tests, forward-model consistency checks, uncertainty labels, provenance requirements, and human review points. |
+| 16:15-16:30 | Closeout and overnight AI brief. Confirm the selected cases, evaluation targets, out-of-scope items, artifact owners, and the synthesis to prepare for Tuesday. |
 
 ## Use-Case Card Template
 
@@ -57,3 +54,5 @@ Each card should include:
 - Make evaluation central. If a use case cannot say how success would be tested, it is not ready to drive architecture decisions.
 - Treat KPA 4 as the workflow lens, not as a separate end-of-week topic.
 - Treat KPAs 1-3 as mechanisms: embeddings, generative reconstruction, and simulator-backed mappings.
+- Do not stop the morning session for coffee; participants can have coffee before the 10:00 start and at 14:30.
+- Make the overnight AI assignment explicit before closing.

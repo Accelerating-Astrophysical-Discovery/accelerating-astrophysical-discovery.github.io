@@ -25,11 +25,11 @@ This should include:
 
 | Time | Activity |
 | --- | --- |
-| 9:30-10:00 | Morning kickoff talk: **Compute, data access, and funding the open foundation-model effort.** Estimate the resources needed for data curation, distributed training, simulator-backed dataset generation, evaluation, deployment, and long-term maintenance. |
+| 9:30-10:00 | Funding and continuity kickoff. Review the week's concrete artifacts and estimate the resources needed for data curation, distributed training, simulator-backed dataset generation, evaluation, deployment, and long-term maintenance. |
 | 10:00-10:30 | Map resource needs. Groups list compute, data access, simulator access, archive relationships, software expertise, funding, and missing roles needed for each MVP workstream. |
 | 10:30-11:00 | Coffee break |
 | 11:00-11:30 | Build the funding and partnership map. Identify grants, compute allocations, data-center partnerships, industry collaborations, internal institutional support, and lead owners where possible. |
-| 11:30-12:00 | Consortium roadmap closeout. Confirm 1-month, 3-month, 6-month, and 12-month milestones, working groups, technical owners, white-paper leads, follow-up cadence, and external invitee list. |
+| 11:30-12:00 | Commitments and roadmap closeout. Record desired participation and responsibilities; confirm 1-, 3-, 6-, and 12-month milestones, working groups, technical owners, white-paper leads, follow-up cadence, and external invitees. |
 | 12:00-13:30 | Closing lunch. Informal continuation, final owner confirmations, and departures. |
 
 ## Roadmap Template
@@ -53,3 +53,4 @@ The Friday artifact should include:
 - Keep roadmap milestones tied to Thursday's MVP backlog.
 - Identify missing owners explicitly.
 - Separate what can start immediately from what needs funding or external agreements.
+- Treat industry as a possible scaling partner, not a prerequisite for beginning the consortium's technical work.

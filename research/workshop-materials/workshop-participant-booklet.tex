@@ -29,6 +29,13 @@
 \definecolor{Ink}{HTML}{142632}
 \definecolor{Muted}{HTML}{526775}
 \definecolor{Divider}{HTML}{CAD9DE}
+\definecolor{Coral}{HTML}{D9785C}
+\definecolor{Violet}{HTML}{7A5BA7}
+\definecolor{Teal}{HTML}{2E7D6E}
+\definecolor{PaleBlue}{HTML}{92B6D5}
+\definecolor{Ochre}{HTML}{B98548}
+\definecolor{Slate}{HTML}{65747D}
+\definecolor{Magenta}{HTML}{C85A89}
 
 \hypersetup{
   colorlinks=true,
@@ -68,6 +75,9 @@
 \newcommand{\kpanumber}[1]{%
   \tikz[baseline=(char.base)]{%
     \node[circle,fill=DeepBlue,text=white,font=\bfseries\small,inner sep=2.2pt] (char) {#1};}}
+
+\newcommand{\chartdot}[1]{%
+  \tikz[baseline=-0.45ex]{\fill[#1] (0,0) circle[radius=1.05mm];}}
 
 \newtcolorbox{infobox}[1][]{
   enhanced,
@@ -223,6 +233,46 @@ This booklet introduces the consortium's ambition, explains the initial working 
   Zhao & Yue & SURF, NL\\
 \end{tabularx}
 }
+
+\vspace{3mm}
+\begin{tcolorbox}[enhanced,colback=Cloud,colframe=Divider,boxrule=.5pt,arc=1.5mm,left=3.5mm,right=3.5mm,top=2.5mm,bottom=2.5mm]
+  {\small\bfseries\color{DeepBlue}Consortium fields}\hfill
+  {\scriptsize\color{Muted}Share of field entries}\par\vspace{1.5mm}
+  \begin{minipage}[c]{0.34\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \path[fill=DeepBlue,draw=white,line width=.35pt] (0,0) -- (90:15mm) arc[start angle=90,end angle=-12.857,radius=15mm] -- cycle;
+      \path[fill=Sky,draw=white,line width=.35pt] (0,0) -- (-12.857:15mm) arc[start angle=-12.857,end angle=-64.286,radius=15mm] -- cycle;
+      \path[fill=Aqua,draw=white,line width=.35pt] (0,0) -- (-64.286:15mm) arc[start angle=-64.286,end angle=-110,radius=15mm] -- cycle;
+      \path[fill=Gold,draw=white,line width=.35pt] (0,0) -- (-110:15mm) arc[start angle=-110,end angle=-144.286,radius=15mm] -- cycle;
+      \path[fill=Coral,draw=white,line width=.35pt] (0,0) -- (-144.286:15mm) arc[start angle=-144.286,end angle=-178.571,radius=15mm] -- cycle;
+      \path[fill=Violet,draw=white,line width=.35pt] (0,0) -- (-178.571:15mm) arc[start angle=-178.571,end angle=-201.429,radius=15mm] -- cycle;
+      \path[fill=Teal,draw=white,line width=.35pt] (0,0) -- (-201.429:15mm) arc[start angle=-201.429,end angle=-224.286,radius=15mm] -- cycle;
+      \path[fill=PaleBlue,draw=white,line width=.35pt] (0,0) -- (-224.286:15mm) arc[start angle=-224.286,end angle=-247.143,radius=15mm] -- cycle;
+      \path[fill=Ochre,draw=white,line width=.35pt] (0,0) -- (-247.143:15mm) arc[start angle=-247.143,end angle=-258.571,radius=15mm] -- cycle;
+      \path[fill=Slate,draw=white,line width=.35pt] (0,0) -- (-258.571:15mm) arc[start angle=-258.571,end angle=-264.286,radius=15mm] -- cycle;
+      \path[fill=Magenta,draw=white,line width=.35pt] (0,0) -- (-264.286:15mm) arc[start angle=-264.286,end angle=-270,radius=15mm] -- cycle;
+      \draw[Divider,line width=.45pt] (0,0) circle[radius=15mm];
+    \end{tikzpicture}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.62\linewidth}
+    {\fontsize{6.9}{7.8}\selectfont
+    \renewcommand{\arraystretch}{0.96}
+    \begin{tabularx}{\linewidth}{@{}c>{\raggedright\arraybackslash}X>{\bfseries\color{DeepBlue}}r@{}}
+      \chartdot{DeepBlue} & AI & 28.6\%\\
+      \chartdot{Sky} & Cosmology & 14.3\%\\
+      \chartdot{Aqua} & Radio & 12.7\%\\
+      \chartdot{Gold} & Computational physics & 9.5\%\\
+      \chartdot{Coral} & Gravitational waves & 9.5\%\\
+      \chartdot{Violet} & Gamma-rays & 6.3\%\\
+      \chartdot{Teal} & Neutrinos & 6.3\%\\
+      \chartdot{PaleBlue} & Optical & 6.3\%\\
+      \chartdot{Ochre} & X-Ray & 3.2\%\\
+      \chartdot{Slate} & CRs & 1.6\%\\
+      \chartdot{Magenta} & Infrared & 1.6\%\\
+    \end{tabularx}}
+  \end{minipage}
+\end{tcolorbox}
 \newpage
 
 \pagetitle{The consortium}{Two connected pillars}
@@ -367,25 +417,24 @@ The four KPAs are a starting framework, not a fixed list. A central workshop goa
 
 \vspace{4mm}
 \begin{infobox}
-  \textbf{Working rhythm}\quad Each day combines brief framing talks, small-group work, plenary synthesis, and a closeout that confirms the artifact and its owners. Coffee breaks and lunches are part of the programme: use them to connect ideas across disciplines.
+  \textbf{Working rhythm}\quad Each day combines brief framing, active work, plenary synthesis, and a concrete closeout. Tuesday--Thursday begin by reviewing overnight AI work; Monday--Wednesday end by agreeing what the AI should prepare for the next morning. Coffee breaks and lunches are part of the programme: use them to connect ideas across disciplines.
 \end{infobox}
 
 \vfill
-{\small\color{Muted}Formal working hours are 10:00--16:30 on Monday, 9:30--17:00 Tuesday--Thursday, and 9:30--13:30 on Friday.}
+{\small\color{Muted}Formal working hours are 10:00--16:30 on Monday, 9:30--17:00 Tuesday--Thursday, and 9:30--13:30 on Friday. The building is open for arrivals and coffee from 09:00 on Monday.}
 \newpage
 
 \dayheader{Monday}{Use cases and discovery workflows}{10:00--16:30}{Shared Vocabulary and Discovery-Evaluation Map v0}
 
 \begin{scheduletable}
-  \slot{10:00--10:30}{Kickoff talk}{Shared vocabulary for AI-accelerated discovery.}
-  \slot{10:30--11:00}{Coffee break}{}
-  \slot{11:00--12:00}{Use-case working session}{Draft cards covering workflow, roles, data, capability, and evidence of success.}
+  \slot{09:00--10:00}{Arrival and coffee}{The formal programme begins at 10:00.}
+  \slot{10:00--10:30}{Kickoff talk}{AI-first science, the two pillars, and KPAs as a starting framework.}
+  \slot{10:30--12:00}{Science 2.0 + use cases}{Work from long-term visions back to concrete workflows and candidate use cases.}
   \slot{12:00--13:30}{Lunch}{}
-  \slot{13:30--14:00}{Afternoon talk}{Frame KPAs 1--4 as testable capabilities.}
-  \slot{14:00--14:30}{Refine use cases}{Choose mechanisms and a small set of flagship cases.}
+  \slot{13:30--14:30}{Plenary synthesis}{Share, refine, and select a small set of flagship use cases.}
   \slot{14:30--15:00}{Coffee break}{}
   \slot{15:00--16:15}{Define evaluation targets}{Controls, baselines, anomaly tests, forward checks, uncertainty, provenance, and human review.}
-  \slot{16:15--16:30}{Closeout}{Confirm vocabulary, cases, evaluations, and artifact owners.}
+  \slot{16:15--16:30}{Closeout + AI brief}{Confirm cases, evaluations, owners, and the overnight synthesis for Tuesday.}
   \slot{16:30 onward}{Welcome reception}{Informal continuation after the formal programme.}
 \end{scheduletable}
 
@@ -398,16 +447,15 @@ The four KPAs are a starting framework, not a fixed list. A central workshop goa
 \dayheader{Tuesday}{Data, representation, and provenance}{9:30--17:00}{Relevancy Graph v0 for Monday's selected use cases}
 
 \begin{scheduletable}
-  \slot{9:30--10:00}{Kickoff talk}{The training corpus as a relevancy graph.}
-  \slot{10:00--10:30}{Map data objects}{Connect use cases to observations, simulations, instruments, code, and provenance.}
+  \slot{9:30--10:00}{Kickoff + overnight review}{Correct Monday's synthesis; introduce the graph and tokenisation challenges.}
+  \slot{10:00--10:30}{Map data objects}{Use participants' lists to connect cases to observations, simulations, instruments, code, and provenance.}
   \slot{10:30--11:00}{Coffee break}{}
-  \slot{11:00--12:00}{Define the graph}{Agree node types, edge types, metadata, provenance, and ambiguities.}
+  \slot{11:00--12:00}{Graph working session}{Define nodes, relevancy links, metadata, provenance, ambiguities, and training relationships.}
   \slot{12:00--13:30}{Lunch}{}
-  \slot{13:30--14:00}{Afternoon talk}{Tokenising heterogeneous physical data.}
-  \slot{14:00--14:30}{Tokenisation implications}{Units, scale, locality, order, uncertainty, missingness, modality, and context.}
+  \slot{13:30--14:30}{Plenary graph synthesis}{Share group results and assemble Relevancy Graph v0.}
   \slot{14:30--15:00}{Coffee break}{}
-  \slot{15:00--16:30}{Plenary synthesis}{Build Relevancy Graph v0 and extract architecture constraints.}
-  \slot{16:30--17:00}{Closeout}{Confirm owners and open decisions.}
+  \slot{15:00--16:30}{Tokenisation + constraints}{Record what representations must preserve and the constraints for Wednesday.}
+  \slot{16:30--17:00}{Closeout + AI brief}{Confirm owners; commission a draft schema or prototype and architecture primer.}
 \end{scheduletable}
 
 \vfill
@@ -419,16 +467,15 @@ The four KPAs are a starting framework, not a fixed list. A central workshop goa
 \dayheader{Wednesday}{Long-context architecture and training}{9:30--17:00}{Architecture and Training Protocol v0}
 
 \begin{scheduletable}
-  \slot{9:30--10:00}{Kickoff talk}{Long-context architectures for multimodal physics.}
+  \slot{9:30--10:00}{Kickoff + overnight review}{Review the primer and graph work; frame long-context, recurrent-depth, and graph-attention challenges.}
   \slot{10:00--10:30}{Translate graph constraints}{Preserve typed objects, relationships, units, uncertainty, and metadata.}
   \slot{10:30--11:00}{Coffee break}{}
-  \slot{11:00--12:00}{Sketch architecture families}{Encoders, shared representations, retrieval, generative heads, simulators, and tool interfaces.}
+  \slot{11:00--12:00}{Architecture working session}{Use AI to sketch candidate architecture families, objectives, and training hypotheses.}
   \slot{12:00--13:30}{Lunch}{}
-  \slot{13:30--14:00}{Afternoon talk}{Training protocol and compute-to-data deployment.}
-  \slot{14:00--14:30}{Define training objectives}{Alignment, reconstruction, prediction, generation, forward consistency, and uncertainty.}
+  \slot{13:30--14:30}{Plenary synthesis}{Compare designs, identify common components, and retain justified alternatives.}
   \slot{14:30--15:00}{Coffee break}{}
-  \slot{15:00--16:30}{Stage the training path}{Seed corpus, synthetic data, access, preprocessing, validation, scaling, and risks.}
-  \slot{16:30--17:00}{Closeout}{Confirm the architecture, protocol, open decisions, and owners.}
+  \slot{15:00--16:30}{Training + prototype brief}{Set objectives, simulator feedback, deployment, validation, scaling, risks, and Thursday artifacts.}
+  \slot{16:30--17:00}{Closeout + AI brief}{Confirm hypotheses, protocol, owners, and overnight prototype work.}
   \slot{17:00--20:00}{Workshop dinner}{Informal continuation after the formal programme.}
 \end{scheduletable}
 \newpage
@@ -436,17 +483,15 @@ The four KPAs are a starting framework, not a fixed list. A central workshop goa
 \dayheader{Thursday}{MVP architecture and hackathon}{9:30--17:00}{MVP Implementation Plan and Hackathon Artifacts v0}
 
 \begin{scheduletable}
-  \slot{9:30--10:00}{Kickoff talk}{Turn the week's artifacts into MVP workstreams.}
-  \slot{10:00--10:30}{Define MVP scope}{Select the smallest credible system, graph, data, architecture, and evaluations.}
+  \slot{9:30--10:00}{Kickoff + overnight review}{Review the prototype, state the MVP target, and share AI-assisted coding approaches.}
+  \slot{10:00--10:30}{Self-organise workstreams}{Choose concrete artifacts and owners across technical, documentation, and roadmap work.}
   \slot{10:30--11:00}{Coffee break}{}
-  \slot{11:00--12:00}{Workstreams and backlog}{Name owners; write issues with acceptance criteria and links to use cases.}
+  \slot{11:00--12:00}{Open hackathon I}{Build toy-scale artifacts in the main room or breakouts.}
   \slot{12:00--13:30}{Lunch}{}
-  \slot{13:30--14:00}{Hackathon checkpoint}{Set the integration target across model, data, and evaluation.}
-  \slot{14:00--14:30}{Hackathon sprint 1}{Schemas, manifests, examples, evaluation specs, prototypes, or CI.}
+  \slot{13:30--14:30}{Open hackathon II}{Continue building; demonstrate useful progress as it appears.}
   \slot{14:30--15:00}{Coffee break}{}
-  \slot{15:00--16:00}{Hackathon sprint 2}{Continue implementation and integration.}
-  \slot{16:00--16:30}{Integration review}{Report repository artifacts, gaps, and next owners.}
-  \slot{16:30--17:00}{Closeout}{Finalise the plan, backlog, owners, and next technical meeting.}
+  \slot{15:00--16:15}{Show-and-tell + integration}{Demonstrate artifacts, connect them to use cases and evaluation, and identify gaps.}
+  \slot{16:15--17:00}{Closeout + Friday handoff}{Confirm artifacts, issues, owners, next work, and Friday's resource questions.}
 \end{scheduletable}
 
 \vfill
@@ -456,11 +501,11 @@ The four KPAs are a starting framework, not a fixed list. A central workshop goa
 \dayheader{Friday}{Roadmap, governance, and funding}{9:30--13:30}{Consortium Roadmap and Funding Package v0}
 
 \begin{scheduletable}
-  \slot{9:30--10:00}{Kickoff talk}{Compute, data access, and funding an open foundation-model effort.}
+  \slot{9:30--10:00}{Funding + continuity kickoff}{Review the week's artifacts and frame resources, partnerships, deployment, and maintenance.}
   \slot{10:00--10:30}{Map resource needs}{Compute, data, simulators, archives, expertise, funding, and missing roles.}
   \slot{10:30--11:00}{Coffee break}{}
   \slot{11:00--11:30}{Funding and partnerships}{Identify opportunities, partners, institutional support, and lead owners.}
-  \slot{11:30--12:00}{Roadmap closeout}{Confirm milestones, working groups, owners, cadence, and invitees.}
+  \slot{11:30--12:00}{Commitments + roadmap}{Record desired participation; confirm milestones, owners, cadence, and invitees.}
   \slot{12:00--13:30}{Closing lunch}{Final confirmations and departures.}
 \end{scheduletable}
 

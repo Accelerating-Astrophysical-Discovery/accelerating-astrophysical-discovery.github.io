@@ -4,6 +4,8 @@ The week has two linked components. Monday is devoted to shared vocabulary, use 
 
 The KPAs are not four independent week-long tracks. KPA 4, collaborative scientific reasoning, is the framing lens for Monday. KPAs 1-3 are also handled on Monday as concrete use-case mechanisms and evaluation probes: embeddings for serendipity, generative cross-instrument inference, and simulator-backed observation-to-state inference.
 
+The working rhythm includes an AI handoff between days. Tuesday through Thursday begin by reviewing and correcting the previous night's AI-assisted synthesis or prototype. Monday through Wednesday end by agreeing what the AI should prepare overnight for the following morning; Thursday closes by preparing the material Friday needs for decisions about continuity.
+
 ## Daily deliverables
 
 | Day | Focus | Main deliverable |
@@ -22,15 +24,14 @@ The KPAs are not four independent week-long tracks. KPA 4, collaborative scienti
 
 | Time | Session | Focus |
 | --- | --- | --- |
-| 10:00-10:30 | Morning talk slot | Set shared vocabulary for joint representation, embeddings, conditional generation, simulator-backed data, long context, agentic workflow, provenance, validation, uncertainty, and human judgement. |
-| 10:30-11:00 | Coffee break |  |
-| 11:00-12:00 | Morning working session | Draft use-case cards. Each card should state the scientific workflow, human role, machine role, required data, model capability, and evidence that the workflow is working. |
+| 09:00-10:00 | Arrival and coffee | The building is open from 09:00; the formal programme begins at 10:00. |
+| 10:00-10:30 | Kickoff talk | Frame AI-first science, the two consortium pillars, and the KPAs as a starting point that the workshop may reshape. |
+| 10:30-12:00 | Science 2.0 and use-case working session | Work from long-term visions back to concrete use cases. Each candidate should state the scientific workflow, human role, machine role, required data, model capability, and evidence of success. |
 | 12:00-13:30 | Lunch |  |
-| 13:30-14:00 | Afternoon talk slot | Frame KPAs 1-4 as testable capabilities: embeddings for serendipity, generative reconstruction, simulator-backed observation-to-state inference, and agentic human-machine discovery. |
-| 14:00-14:30 | Afternoon working session I | Refine use cases around concrete mechanisms and select a small set of flagship cases. |
+| 13:30-14:30 | Plenary synthesis and selection | Groups share their visions and candidate use cases; the plenary refines and selects a small set of flagship cases. |
 | 14:30-15:00 | Coffee break |  |
-| 15:00-16:15 | Afternoon working session II | Define evaluation targets: positive controls, rare-class or synthetic anomaly tests, baseline comparisons, forward-model consistency checks, uncertainty labels, provenance requirements, and human review points. |
-| 16:15-16:30 | Closeout | Confirm the shared vocabulary, selected use cases, evaluation targets, and owners for writing the Monday artifact. |
+| 15:00-16:15 | Define evaluation targets | Set positive controls, rare-class or synthetic anomaly tests, baseline comparisons, forward-model consistency checks, uncertainty labels, provenance requirements, and human review points. |
+| 16:15-16:30 | Closeout and overnight AI brief | Confirm the selected cases, evaluation targets, artifact owners, and the synthesis the AI should prepare for Tuesday. |
 | 16:30 onward | Welcome reception | Informal continuation after the formal Monday programme. |
 
 ## Tuesday
@@ -41,16 +42,15 @@ The KPAs are not four independent week-long tracks. KPA 4, collaborative scienti
 
 | Time | Session | Focus |
 | --- | --- | --- |
-| 9:30-10:00 | Morning talk slot | Explain the training corpus as a relevancy graph coupling data, tokenisation, and provenance. |
-| 10:00-10:30 | Morning working session I | Map Monday use cases to required data objects: observations, catalogues, simulations, synthetic observations, instrument responses, language, code, and provenance records. |
+| 9:30-10:00 | Kickoff and overnight review | Correct Monday's AI-assisted synthesis; introduce the relevancy graph, current multimodal examples, and tokenisation challenges. |
+| 10:00-10:30 | Map data objects | Use participants' dataset lists to connect Monday's cases to observations, catalogues, simulations, synthetic observations, instrument responses, language, code, and provenance. |
 | 10:30-11:00 | Coffee break |  |
-| 11:00-12:00 | Morning working session II | Define node types, edge types, metadata fields, provenance requirements, and known ambiguities. |
+| 11:00-12:00 | Graph working session | Define node types, relevancy links, metadata, provenance, known ambiguities, and how graph connectivity should structure training. |
 | 12:00-13:30 | Lunch |  |
-| 13:30-14:00 | Afternoon talk slot | Frame tokenisation choices for heterogeneous physical data without committing to a final implementation. |
-| 14:00-14:30 | Afternoon working session I | Identify tokenisation implications for each node and edge type: units, scale, locality, ordering, uncertainty, missingness, modality, provenance, and physical context. |
+| 13:30-14:30 | Plenary graph synthesis | Share group results and assemble the common Relevancy Graph v0 for the selected use cases. |
 | 14:30-15:00 | Coffee break |  |
-| 15:00-16:30 | Afternoon working session II | Synthesize the Relevancy Graph v0 and the architecture constraints it imposes. |
-| 16:30-17:00 | Closeout | Confirm owners for node types, edge types, metadata, provenance fields, tokenisation implications, and open decisions. |
+| 15:00-16:30 | Tokenisation and architecture constraints | Decide what representations must preserve—units, scale, locality, ordering, uncertainty, missingness, modality, provenance, and physical context—and record the constraints imposed on Wednesday. |
+| 16:30-17:00 | Closeout and overnight AI brief | Confirm owners and open decisions; commission a draft schema or prototype plus a short architecture primer for Wednesday. |
 
 ## Wednesday
 
@@ -60,16 +60,15 @@ The KPAs are not four independent week-long tracks. KPA 4, collaborative scienti
 
 | Time | Session | Focus |
 | --- | --- | --- |
-| 9:30-10:00 | Morning talk slot | Frame long-context architectures for multimodal physics: retrieval, memory, hierarchical context, modality-specific encoders, shared latent spaces, generative heads, and simulator conditioning. |
-| 10:00-10:30 | Morning working session I | Translate the Relevancy Graph v0 into architecture constraints: typed objects, relationships, physical units, coordinates, uncertainty, provenance, missingness, instrument metadata, and simulator metadata. |
+| 9:30-10:00 | Kickoff and overnight review | Review the primer and overnight graph work; frame long-context, recurrent-depth, graph-attention, multimodal, and simulator-backed architecture challenges from basic concepts upward. |
+| 10:00-10:30 | Translate graph constraints | Identify what the architecture must preserve: typed objects and relationships, physical units, coordinates, uncertainty, provenance, missingness, instrument metadata, and simulator metadata. |
 | 10:30-11:00 | Coffee break |  |
-| 11:00-12:00 | Morning working session II | Sketch candidate architecture families and representation objectives. |
+| 11:00-12:00 | Architecture working session | Groups use AI to sketch candidate architecture families, representation objectives, and training hypotheses tied to Tuesday's graph. |
 | 12:00-13:30 | Lunch |  |
-| 13:30-14:00 | Afternoon talk slot | Frame training protocol and compute-to-data deployment across distributed archives and HPC environments. |
-| 14:00-14:30 | Afternoon working session I | Define training objectives: contrastive alignment, reconstruction, cross-modal prediction, conditional generation, forward-model consistency, provenance-aware supervision, and uncertainty-aware validation. |
+| 13:30-14:30 | Plenary architecture synthesis | Compare the candidate designs, identify common components and disagreements, and retain multiple hypotheses where evidence is insufficient. |
 | 14:30-15:00 | Coffee break |  |
-| 15:00-16:30 | Afternoon working session II | Define the staged training protocol: seed corpus, simulator-backed synthetic data, data access model, preprocessing, validation splits, monitoring, scaling path, compute assumptions, and failure modes. |
-| 16:30-17:00 | Closeout | Confirm the architecture sketch, training protocol, open decisions, and risk list. |
+| 15:00-16:30 | Training protocol and prototype brief | Define objectives, simulator feedback, compute-to-data deployment, validation, staged scaling, risks, and the starter code or artifacts needed for Thursday. |
+| 16:30-17:00 | Closeout and overnight AI brief | Confirm architecture hypotheses, the training protocol, owners, and the prototype work the AI should prepare overnight. |
 | 17:00-20:00 | Workshop dinner | Informal continuation after the formal Wednesday programme. |
 
 ## Thursday
@@ -80,16 +79,15 @@ The KPAs are not four independent week-long tracks. KPA 4, collaborative scienti
 
 | Time | Session | Focus |
 | --- | --- | --- |
-| 9:30-10:00 | Morning talk slot | Translate Monday-Wednesday artifacts into a small number of MVP workstreams. |
-| 10:00-10:30 | Morning working session I | Define the smallest credible MVP scope: selected use cases, required data types, minimal graph schema, first architecture path, and first evaluation targets. |
+| 9:30-10:00 | Kickoff and overnight review | Summarise Monday-Wednesday, inspect the overnight prototype, state the MVP target, and share practical AI-assisted coding approaches. |
+| 10:00-10:30 | Self-organise workstreams | Choose concrete data/graph, tokenisation, architecture, training, evaluation, infrastructure, documentation/white-paper, or roadmap/funding artifacts and name owners. |
 | 10:30-11:00 | Coffee break |  |
-| 11:00-12:00 | Morning working session II | Create workstreams, owners, and GitHub issues with acceptance criteria. |
+| 11:00-12:00 | Open hackathon I | Build the first artifacts at toy scale; participants may move to breakout rooms and whiteboards as needed. |
 | 12:00-13:30 | Lunch |  |
-| 13:30-14:00 | Afternoon talk slot | Set the hackathon integration target: every artifact should connect to a use case, model capability, and evaluation target. |
-| 14:00-14:30 | Hackathon sprint I | Work on repo artifacts: schemas, manifests, example records, tokenisation examples, evaluation specs, issue templates, prototype code, or CI/CD setup. |
+| 13:30-14:30 | Open hackathon II | Continue building and integrating artifacts, with immediate demonstrations when something begins to work. |
 | 14:30-15:00 | Coffee break |  |
-| 15:00-16:30 | Hackathon sprint II | Continue implementation and integration, keeping work tied to the MVP scope. |
-| 16:30-17:00 | Closeout | Review repository artifacts, unresolved issues, owners, and next technical meeting. |
+| 15:00-16:15 | Show-and-tell and integration | Demonstrate code and designs, connect each artifact to a use case and evaluation target, and identify gaps. |
+| 16:15-17:00 | Closeout and Friday handoff | Review repository artifacts, unresolved issues, owners, next technical work, and the funding or governance questions Friday must resolve. |
 
 ## Friday
 
@@ -99,11 +97,11 @@ The KPAs are not four independent week-long tracks. KPA 4, collaborative scienti
 
 | Time | Session | Focus |
 | --- | --- | --- |
-| 9:30-10:00 | Morning talk slot | Frame compute, data access, funding, data-center partnerships, simulator access, evaluation, deployment, and long-term maintenance. |
+| 9:30-10:00 | Funding and continuity kickoff | Review the week's artifacts and frame compute, data access, funding, partnerships, deployment, and long-term maintenance. |
 | 10:00-10:30 | Morning working session I | Map resource needs for each MVP workstream: compute, data access, simulator access, archive relationships, software expertise, funding, and missing roles. |
 | 10:30-11:00 | Coffee break |  |
 | 11:00-11:30 | Morning working session II | Build the funding and partnership map, including lead owners where possible. |
-| 11:30-12:00 | Roadmap closeout | Confirm 1-month, 3-month, 6-month, and 12-month milestones, working groups, technical owners, white-paper leads, follow-up cadence, unresolved risks, and external invitees. |
+| 11:30-12:00 | Commitments and roadmap closeout | Record desired participation and responsibilities; confirm 1-, 3-, 6-, and 12-month milestones, owners, white-paper leads, follow-up cadence, unresolved risks, and external invitees. |
 | 12:00-13:30 | Closing lunch | Informal continuation, final owner confirmations, and departures. |
 
 ## Expected outcomes
