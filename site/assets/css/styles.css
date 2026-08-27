@@ -204,7 +204,7 @@ img {
 
 .member-list {
   width: min(920px, calc(100vw - 2rem));
-  margin: 0 auto 18vh;
+  margin: 0 auto clamp(4rem, 10vh, 7rem);
 }
 
 .member-card {
@@ -264,6 +264,60 @@ img {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.2;
+}
+
+.member-join {
+  width: min(920px, calc(100vw - 2rem));
+  margin: 0 auto 18vh;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--line);
+  background: rgba(var(--paper-rgb), 0.62);
+}
+
+.member-join-kicker {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.member-join h2 {
+  margin: 0;
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.member-join h2 + p {
+  max-width: 46rem;
+  margin: 0.9rem 0 1.4rem;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  line-height: 1.5;
+}
+
+.member-join-button {
+  display: inline-block;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.member-join-button:hover,
+.member-join-button:focus-visible {
+  background: transparent;
+  color: var(--ink);
+}
+
+.member-join-note {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
 }
 
 .writing-row {

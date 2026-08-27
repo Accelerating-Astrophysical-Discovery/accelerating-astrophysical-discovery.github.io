@@ -5,7 +5,7 @@
   <section class="section-heading defocus-scope">
     <h1 class="defocus-item">Members</h1>
   </section>
-  <section class="member-list defocus-scope" aria-label="Workshop members">
+  <section class="member-list defocus-scope" aria-label="Consortium members">
     {% for member in members %}
       <article class="member-card defocus-item">
         <div class="member-portrait-column">
@@ -31,4 +31,15 @@
       <p class="empty-state defocus-item">No members have been published yet.</p>
     {% endfor %}
   </section>
+  {% if site.membership_form_url %}
+    <section class="member-join defocus-scope" aria-labelledby="member-join-title">
+      <div class="defocus-item">
+        <p class="member-join-kicker">Contribute to the consortium</p>
+        <h2 id="member-join-title">Bring your perspective</h2>
+        <p>Tell us about your interests, skills, availability, and the ways you might like to be involved. We shape responsibilities around each member’s time and strengths.</p>
+        <a class="member-join-button" href="{{ site.membership_form_url }}">Join the consortium</a>
+        <p class="member-join-note">The form asks separately for permission before any profile information or headshot is published.</p>
+      </div>
+    </section>
+  {% endif %}
 {% endblock %}

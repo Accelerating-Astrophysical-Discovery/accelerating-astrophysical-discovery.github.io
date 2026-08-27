@@ -1,6 +1,7 @@
 [site]
 title = "Accelerating Astrophysical Discovery with Foundation Models"
 base_url = "https://accelerating-astrophysical-discovery.github.io"
+membership_form_url = "https://docs.google.com/forms/d/e/1FAIpQLSf9cepUblJ_UEt2-9TlchmWkx-JINSjlTbjsOd1VkEH4i9W2Q/viewform"
 
 [giscus]
 repo = "Accelerating-Astrophysical-Discovery/accelerating-astrophysical-discovery.github.io"

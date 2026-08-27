@@ -37,6 +37,7 @@ class GiscusConfig:
 class SiteConfig:
     title: str = "Accelerating Astrophysical Discovery with Foundation Models"
     base_url: str = ""
+    membership_form_url: str = ""
     giscus: GiscusConfig = field(default_factory=GiscusConfig)
 
 
@@ -199,6 +200,7 @@ def load_config(root: Path, production: bool = False) -> SiteConfig:
     config = SiteConfig(
         title=str(site_data.get("title", "Accelerating Astrophysical Discovery with Foundation Models")),
         base_url=str(site_data.get("base_url", "")),
+        membership_form_url=str(site_data.get("membership_form_url", "")),
         giscus=GiscusConfig(
             repo=str(giscus_data.get("repo", "")),
             repo_id=str(giscus_data.get("repo_id", "")),
