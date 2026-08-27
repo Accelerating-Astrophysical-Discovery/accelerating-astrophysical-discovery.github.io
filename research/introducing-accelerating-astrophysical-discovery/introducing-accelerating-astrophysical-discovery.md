@@ -43,3 +43,33 @@ We envision the relevancy graph as a large graph database in which nodes are phy
 In autoregressive language modelling, token order supplies a causal attention mask. Physical data have no universal left-to-right ordering, so self-supervised training needs a more general attentional field. When the system samples connected data from the graph, that connectivity becomes the attention mask: it determines which data can attend to one another while the model predicts, reconstructs, or aligns withheld physical information.
 
 The long-term aim is an agentic discovery system in which reasoning LLMs guide retrieval, tool use, hypothesis generation, simulation, validation, and communication, while the joint-representation model provides grounded physical understanding. Humans remain responsible for scientific judgement, but they work with systems that can search, connect, and test evidence at a scale no individual can manage.
+
+## Key Problem Areas
+
+The goals above are broad. We currently use four Key Problem Areas (KPAs) to make some of the scientific capabilities of a joint-representation model concrete. These KPAs are only a starting point: a working framework, not four separate projects or a closed list. The Leiden workshop and the consortium's continuing work will test whether they frame the right problems and may refine, combine, replace, or add KPAs.
+
+These areas describe things that a joint-representation model could help scientists do. They may also provide training and evaluation targets for learning rich embeddings across observations, simulations, synthetic observations, language, code, and instrumental context. The aim is not to assign one loss function to each KPA, but to use the scientific problems to identify what information the representation must retain and what relationships the model must learn.
+
+### KPA 1: serendipity through embeddings
+
+A physically meaningful embedding space could make serendipity operational. Relevant neighbours in that space could support rare-object discovery, anomaly triage, counterexample search, similarity retrieval, and context discovery that a scientist may not know to request.
+
+Training targets could reward the model for aligning related views of the same physical system, retrieving withheld relevant data, and distinguishing superficially similar but physically different examples. Evaluation should ask whether the resulting embeddings surface rare, surprising, or scientifically meaningful candidates faster and more reliably than current workflows.
+
+### KPA 2: generative inference across instruments
+
+Every instrument sees the universe through limits in resolution, spectral coverage, cadence, noise, calibration, sensitivity, and selection. A joint-representation model could learn across these limits to support deconfusion, gap filling, missing-modality prediction, cross-instrument reconstruction, and other forms of conditional inference without pretending that missing information is known.
+
+Held-out modalities, controlled degradation, uncertainty calibration, forward-model checks, and comparison with classical baselines could serve as training or evaluation targets. They test whether the representation captures shared physical information rather than only producing plausible-looking completions.
+
+### KPA 3: observations to physical states
+
+Multimodal observations could be used to constrain candidate physical states or simulation initial conditions. Model-generated candidates can be evolved through system and instrument simulators and compared back with the observations, making simulation part of the learning and validation loop.
+
+Forward-model consistency provides a strong target for representation learning. The model should retain enough physical information to propose admissible states, expose uncertainty, and reveal through residuals when conditioning information or relevant physics is missing.
+
+### KPA 4: human-machine discovery
+
+The fourth area considers the full workflow: how scientists, reasoning LLMs, tools, simulators, archives, and the joint-representation model work together to form, test, revise, and communicate hypotheses. The model supplies grounded embeddings and generative physical inference; reasoning systems orchestrate retrieval and tools; humans remain responsible for scientific judgement.
+
+Here, the targets extend beyond a model benchmark. We should test whether the combined workflow improves scientific search, triage, hypothesis generation, validation, or communication while preserving uncertainty, negative results, provenance, and human decision points.
