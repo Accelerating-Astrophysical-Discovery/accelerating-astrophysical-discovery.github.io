@@ -10,14 +10,14 @@ KPA 4 frames the day: what should human-machine discovery actually look like? KP
 
 ## Central Deliverable
 
-Shared Vocabulary and Discovery-Evaluation Map v0.
+Use cases and evaluation criteria.
 
 This should include:
 
 - a short glossary for joint representation, embedding, conditional generation, simulator-backed data, long context, agentic workflow, provenance, uncertainty, validation, and human judgement;
 - 3-5 flagship use-case cards;
 - for each use case, the required model capability, required data, human role, machine role, and evaluation target;
-- a short list of use cases that are explicitly out of scope for the first MVP.
+- a short list of use cases that are explicitly out of scope for the first implementation.
 
 ## Timetable
 
@@ -27,10 +27,9 @@ This should include:
 | 10:00-10:30 | Kickoff talk: **AI-first Science 2.0.** Introduce the two consortium pillars, the live AI-assisted working method, and the KPAs as a starting framework that the workshop may refine, combine, replace, or extend. |
 | 10:30-12:00 | Science 2.0 and use-case working session. Groups imagine future scientific workflows, work backwards toward near-term opportunities, and draft candidate use-case cards. Each card must state the human role, machine role, required data, model capability, and evidence of success. |
 | 12:00-13:30 | Lunch |
-| 13:30-14:30 | Plenary synthesis and selection. Groups share their visions and candidate use cases; AI assists with identifying overlaps and disagreements; the plenary selects 3-5 flagship cases. |
+| 13:30-14:30 | Group synthesis and selection. Groups share their visions and candidate use cases; AI assists with identifying overlaps and disagreements; the room selects 3-5 flagship cases. |
 | 14:30-15:00 | Coffee break |
-| 15:00-16:15 | Define evaluation targets for each flagship case: positive controls, baseline comparisons, synthetic anomaly tests, forward-model consistency checks, uncertainty labels, provenance requirements, and human review points. |
-| 16:15-16:30 | Closeout and overnight AI brief. Confirm the selected cases, evaluation targets, out-of-scope items, artifact owners, and the synthesis to prepare for Tuesday. |
+| 15:00-16:30 | Define evaluation targets for each flagship case, plan the workstreams, and agree each team's overnight prompt, runner, and reviewers. |
 
 ## Use-Case Card Template
 
@@ -46,7 +45,7 @@ Each card should include:
 - KPA mechanism;
 - evaluation target;
 - provenance and uncertainty requirements;
-- why this belongs in the first MVP or why it is a stretch case.
+- why this belongs in the first implementation or why it is a stretch case.
 
 ## Facilitator Notes
 

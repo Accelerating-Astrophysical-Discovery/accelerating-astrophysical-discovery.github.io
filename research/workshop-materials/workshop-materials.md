@@ -15,7 +15,7 @@
     </div>
     <div>
       <dt>Booklet</dt>
-      <dd>Version 1.0 · 11 August 2026</dd>
+      <dd>Version 1.1 · 14 September 2026</dd>
     </div>
     <div>
       <dt>Download</dt>
@@ -24,13 +24,13 @@
   </dl>
 </section>
 
-The participant booklet brings the workshop’s essential material together in one place: the consortium’s two pillars, the four Key Problem Areas, ways to prepare, practical information, and the full timetable for the week.
+The participant booklet brings the workshop’s essential material together in one place: the consortium’s two pillars, the relevancy graph, ways to prepare, practical information, each day’s purpose, and the full timetable for the week.
 
 <p><a href="/assets/content/research/workshop-materials/workshop-participant-booklet.pdf" download>Download the participant booklet (PDF)</a></p>
 
 ## Before the workshop
 
-See [“Before Leiden” in the participant booklet](/assets/content/research/workshop-materials/workshop-participant-booklet.pdf#page=7) for what to think about and bring.
+See [“Before Leiden” in the participant booklet](/assets/content/research/workshop-materials/workshop-participant-booklet.pdf#page=6) for what to think about and bring.
 
 ## Practical matters
 

@@ -32,7 +32,7 @@ The second is to build a generative joint-representation model that allows reaso
 
 Together, these pillars aim to accelerate serendipity: helping researchers notice rare objects, surprising analogues, missing context, and cross-instrument relationships they might not know to ask for.
 
-The week will stay deliberately narrow. Monday will define shared vocabulary, flagship use cases, and evaluation targets. The rest of the week will focus on the joint-representation model: the relevancy graph, tokenisation implications, long-context architecture, training protocol, MVP scope, funding, and post-workshop roadmap.
+The week will stay deliberately narrow. Monday will define shared vocabulary, flagship use cases, and evaluation targets. Tuesday and Wednesday will run parallel Data and Model tracks; Thursday will implement selected hypotheses in code with AI assistance; Friday will produce the roadmap.
 
 ## Who should join
 
@@ -48,10 +48,10 @@ We are especially interested in contributors who bring:
 By Friday we aim to leave with:
 
 - selected use cases with explicit evaluation targets;
-- a Relevancy Graph v0 for the required data relationships;
-- an Architecture and Training Protocol v0 for the model;
-- an MVP backlog, hackathon artifacts, and named owners;
-- a consortium roadmap for funding, governance, and follow-up work.
+- a relevancy-graph schema, representation choices, and tokenisation tests;
+- architecture, training, and physical-alignment hypotheses with evidence;
+- working hypotheses implemented in code with AI assistance;
+- a roadmap for funding, governance, and follow-up work.
 
 ## Organizers
 

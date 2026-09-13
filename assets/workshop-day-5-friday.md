@@ -1,56 +1,39 @@
-# Day 5: Friday - Consortium Roadmap, Governance, and Funding
+# Day 5: Friday - Roadmap, Governance, and Funding
 
 Hours: 9:30-13:30
 
 ## Purpose
 
-Friday turns the MVP implementation plan into a collaboration plan that can survive after the workshop. The goal is to decide who owns what, by when, with which resources, and what external funding or partnerships are needed.
+Friday reviews the week's artifacts, evidence, and open questions, then turns them into a programme that can continue. A discussion of funding opportunities informs the final synthesis.
 
 ## Central Deliverable
 
-Consortium Roadmap and Funding Package v0.
+Roadmap.
 
-This should include:
+The roadmap should include:
 
-- MVP roadmap;
-- ownership map;
-- funding plan;
-- compute and data partnership plan;
-- governance model;
-- white-paper outline;
-- external invitee list;
-- follow-up cadence.
+- the current starting point and most important gaps;
+- useful outcomes at 1, 3, 6, and 12 months;
+- leads, contributors, reviewers, and advisers;
+- data, compute, engineering, coordination, and funding needs;
+- partnership approaches and owners;
+- the repository, issue process, decision rights, and meeting cadence.
 
 ## Timetable
 
 | Time | Activity |
 | --- | --- |
-| 9:30-10:00 | Funding and continuity kickoff. Review the week's concrete artifacts and estimate the resources needed for data curation, distributed training, simulator-backed dataset generation, evaluation, deployment, and long-term maintenance. |
-| 10:00-10:30 | Map resource needs. Groups list compute, data access, simulator access, archive relationships, software expertise, funding, and missing roles needed for each MVP workstream. |
+| 9:30-10:00 | Review of the week: findings, evidence, and open questions. |
+| 10:00-10:30 | Roadmap group discussion: priorities, milestones, ownership, and next steps. |
 | 10:30-11:00 | Coffee break |
-| 11:00-11:30 | Build the funding and partnership map. Identify grants, compute allocations, data-center partnerships, industry collaborations, internal institutional support, and lead owners where possible. |
-| 11:30-12:00 | Commitments and roadmap closeout. Record desired participation and responsibilities; confirm 1-, 3-, 6-, and 12-month milestones, working groups, technical owners, white-paper leads, follow-up cadence, and external invitees. |
-| 12:00-13:30 | Closing lunch. Informal continuation, final owner confirmations, and departures. |
-
-## Roadmap Template
-
-The Friday artifact should include:
-
-- 1-month milestones;
-- 3-month milestones;
-- 6-month milestones;
-- 12-month milestones;
-- workstream owners;
-- funding opportunities and deadlines;
-- compute/data partnership targets;
-- governance rules;
-- white-paper outline;
-- follow-up cadence.
+| 11:00-11:30 | Funding opportunities: funding routes, resources, and partnerships. |
+| 11:30-12:00 | Roadmap synthesis: agree the roadmap, immediate actions, and owners. |
+| 12:00-13:30 | Closing lunch |
 
 ## Facilitator Notes
 
-- Friday should produce commitments, not just discussion.
-- Keep roadmap milestones tied to Thursday's MVP backlog.
+- Leave with a roadmap, not only a discussion summary.
+- Tie milestones to the evidence and implementations produced during the week.
 - Identify missing owners explicitly.
-- Separate what can start immediately from what needs funding or external agreements.
-- Treat industry as a possible scaling partner, not a prerequisite for beginning the consortium's technical work.
+- Confirm commitments with the people concerned.
+- Separate work that can start immediately from work requiring funding or external agreements.

@@ -1,60 +1,42 @@
-# Day 4: Thursday - MVP Architecture and Hackathon
+# Day 4: Thursday - AI-Assisted Hypothesis Implementation
 
 Hours: 9:30-17:00
 
 ## Purpose
 
-Thursday turns Monday-Wednesday's conceptual work into an executable MVP plan and concrete repository artifacts. The day should not introduce major new conceptual scope. It should convert use cases, evaluation targets, data relationships, architecture choices, and training protocol into workstreams, tickets, schemas, examples, and prototype components.
+Thursday implements selected Tuesday-Wednesday hypotheses in code with help from AI. Where useful, connect a data/graph example, tokenisation, a candidate learning computation, and an evaluation or simulator check.
 
 ## Central Deliverable
 
-MVP Implementation Plan and Hackathon Artifacts v0.
+Working hypotheses implemented in code with AI assistance.
 
-This should include:
+Each implementation record should include:
 
-- MVP scope;
-- workstreams with owners;
-- repository structure;
-- issue backlog with acceptance criteria;
-- prototype artifacts;
-- dependency and resource map;
-- post-workshop cadence for technical work.
+- the hypothesis, scientific use case, and evaluation target;
+- an owner and contributors;
+- inputs, dependencies, assumptions, and interfaces;
+- the smallest result that can be inspected or demonstrated;
+- tests or other evidence;
+- known gaps and the next handoff.
 
 ## Timetable
 
 | Time | Activity |
 | --- | --- |
-| 9:30-10:00 | Kickoff and overnight review: **From the week's design to an MVP.** Summarise Monday-Wednesday, inspect the overnight prototype, state the smallest credible target, and share practical AI-assisted coding approaches. |
-| 10:00-10:30 | Self-organise workstreams. Participants choose a concrete data/graph, tokenisation, architecture, training, evaluation, infrastructure, documentation/white-paper, or roadmap/funding artifact and name an owner. |
+| 9:30-10:00 | Organiser briefing and overnight review: inspect artifacts, choose hypotheses to implement, and share useful AI-assisted coding approaches. |
+| 10:00-10:30 | Implementation planning: confirm hypotheses, interfaces, tasks, owners, and tests. |
 | 10:30-11:00 | Coffee break |
-| 11:00-12:00 | Open hackathon I. Build toy-scale artifacts in the main room or breakouts; create issues and acceptance criteria as the work becomes concrete. |
+| 11:00-12:00 | AI-assisted implementation I: implement and test working hypotheses; contribute documentation and resource planning. |
 | 12:00-13:30 | Lunch |
-| 13:30-14:30 | Open hackathon II. Continue building and integrating artifacts, with immediate demonstrations whenever something starts to work. |
+| 13:30-14:30 | AI-assisted implementation II: continue implementation, demonstrate useful progress, and record remaining gaps. |
 | 14:30-15:00 | Coffee break |
-| 15:00-16:15 | Show-and-tell and integration. Demonstrate code and designs, connect each artifact to a use case and evaluation target, and identify what remains unresolved. |
-| 16:15-17:00 | Closeout and Friday handoff. Finalise the artifact inventory, issue backlog, owners, next technical work, and the funding or governance questions Friday must resolve. |
-
-## Hackathon Artifact Menu
-
-Useful Thursday artifacts include:
-
-- draft schemas;
-- example data manifests;
-- example relevancy graph records;
-- toy tokenisation examples;
-- evaluation target specs;
-- issue templates;
-- architecture diagrams;
-- simulator interface notes;
-- lightweight prototype code;
-- CI/CD skeleton;
-- documentation pages.
+| 15:00-16:15 | Show-and-tell and integration: demonstrate artifacts, connect them to use cases and evaluation, and identify gaps. |
+| 16:15-17:00 | Closeout and Friday handoff: confirm artifacts and gaps; prepare the week review and roadmap inputs. |
 
 ## Facilitator Notes
 
-- Thursday is execution, not new scope.
-- Reject issues without acceptance criteria.
-- Keep artifacts connected to Monday use cases and evaluation targets.
-- Make ownership explicit before the day ends.
-- Let participants self-organise, but make sure non-coding work on the white paper, roadmap, funding, or documentation also produces a concrete artifact.
-- Use live show-and-tell throughout the day and reserve the final part of the afternoon for synthesis.
+- Implement hypotheses; do not add major new conceptual scope.
+- Keep credentials and restricted data out of public issues.
+- Work in small, reviewable steps and make assumptions explicit.
+- Demonstrate partial results as soon as they become useful.
+- Record failed or incomplete implementations honestly.
