@@ -1,0 +1,6 @@
+name = "Thomas Albin"
+last_name = "Albin"
+join_date = "2026-09-16"
+affiliations = ["University of Stuttgart", "The Cosmic Lab"]
+research_areas = ["Machine learning / deep learning in space science (cosmic dust & small bodies)"]
+bio = "Space Scientist - Working on NASA's Cassini data, Near-Earth Objects, Meteors and Cosmic Dust in general. Monte-Carlo simulations and AI-driven data analysis, classification & instrument calibration"

@@ -69,7 +69,8 @@ def copy_member_images(output: Path, members: list[Member]) -> None:
     target = output / "assets" / "members"
     target.mkdir(parents=True, exist_ok=True)
     for member in members:
-        shutil.copy2(member.image_path, target / member.image_path.name)
+        if member.image_path is not None:
+            shutil.copy2(member.image_path, target / member.image_path.name)
 
 
 def copy_writing_assets(root: Path, output: Path, writings: list[Writing]) -> None:

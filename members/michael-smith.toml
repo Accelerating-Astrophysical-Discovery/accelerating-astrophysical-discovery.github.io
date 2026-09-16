@@ -1,0 +1,6 @@
+name = "Michael J. Smith"
+last_name = "Smith"
+join_date = "2026-09-16"
+affiliations = ["AstroAI", "Harvard-Smithsonian Center for Astrophysics", "UniverseTBD"]
+research_areas = ["Astro-foundation models", "Mechanistic interpretability"]
+bio = "Mike is an AstroAI fellow at the Harvard-Smithsonian CfA. He is interested in foundation models for astronomy and other observational sciences, as well as building infrastructure that democratizes and eases access to these models."

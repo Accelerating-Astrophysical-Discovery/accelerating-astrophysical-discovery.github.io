@@ -80,15 +80,19 @@ class Member:
     name: str
     last_name: str
     join_date: date
-    image_path: Path
+    image_path: Path | None
     metadata_path: Path
     affiliations: list[str]
     research_areas: list[str]
     bio: str
 
     @property
-    def image_url(self) -> str:
-        return f"/assets/members/{self.image_path.name}"
+    def image_url(self) -> str | None:
+        return f"/assets/members/{self.image_path.name}" if self.image_path else None
+
+    @property
+    def initials(self) -> str:
+        return self.name[0] + self.last_name[0]
 
 
 @dataclass
@@ -181,7 +185,7 @@ def _member_from_entry(root: Path, member: MemberEntry) -> Member:
         name=member.name,
         last_name=member.last_name,
         join_date=member.join_date,
-        image_path=root / member.image_path,
+        image_path=root / member.image_path if member.image_path else None,
         metadata_path=root / member.metadata_path,
         affiliations=list(member.affiliations),
         research_areas=list(member.research_areas),

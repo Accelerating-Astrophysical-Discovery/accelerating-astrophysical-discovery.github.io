@@ -1,0 +1,8 @@
+name = "Philip Weigel"
+last_name = "Weigel"
+join_date = "2026-09-16"
+affiliations = ["Harvard University"]
+research_areas = ["Neutrino physics"]
+# ORCID has no public works; this summary uses only the submitted affiliation and research area.
+bio = "Philip Weigel is based at Harvard University and works on neutrino physics."
+show_headshot = false

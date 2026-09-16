@@ -1,0 +1,7 @@
+name = "Noelle I. Samia"
+last_name = "Samia"
+join_date = "2026-09-16"
+affiliations = ["Northwestern University", "NSF-Simons SkAI Institute"]
+research_areas = ["Serially dependent messy data", "Anomaly detection", "Astro AI", "Multimodal large language models", "Foundation models", "AI4Science", "Benchmarking inference and UQ"]
+bio = "Associate Professor of Statistics and Data Science; NSF-Simons SkAI Institute Senior Personnel"
+show_headshot = false

@@ -1,0 +1,8 @@
+name = "Hertzog Landman Bester"
+last_name = "Bester"
+join_date = "2026-09-16"
+affiliations = ["South African Radio Astronomy Observatory", "Rhodes University"]
+research_areas = ["Radio interferometry", "Bayesian imaging", "Scientific computing"]
+# Bio and research areas inferred from https://orcid.org/0000-0002-7348-2229.
+bio = "Hertzog Landman Bester works on radio interferometric imaging and computational methods for radio astronomy. His work includes Bayesian image reconstruction, radio-continuum surveys, and imaging software for radio interferometers."
+show_headshot = false

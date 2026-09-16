@@ -76,19 +76,17 @@ def _load_members(root: Path, errors: list[str]) -> list[MemberEntry]:
 
     for slug in sorted(set(images_by_stem) - set(metadata_by_stem)):
         errors.append(f"missing member metadata for {_rel(root, images_by_stem[slug])}: expected {slug}.toml")
-    for slug in sorted(set(metadata_by_stem) - set(images_by_stem)):
-        errors.append(f"missing member image for {_rel(root, metadata_by_stem[slug])}")
 
     members: list[MemberEntry] = []
-    for slug in sorted(set(images_by_stem) & set(metadata_by_stem)):
-        image_path = images_by_stem[slug]
+    for slug in sorted(metadata_by_stem):
+        image_path = images_by_stem.get(slug)
         metadata_path = metadata_by_stem[slug]
         data = _read_toml(metadata_path, errors, root)
         if data is None:
             continue
         _reject_unknown_keys(
             data,
-            {"affiliations", "bio", "join_date", "last_name", "name", "research_areas"},
+            {"affiliations", "bio", "join_date", "last_name", "name", "research_areas", "show_headshot"},
             metadata_path,
             errors,
             root,
@@ -99,6 +97,16 @@ def _load_members(root: Path, errors: list[str]) -> list[MemberEntry]:
         affiliations = _required_str_list(data, "affiliations", metadata_path, errors, root)
         research_areas = _required_str_list(data, "research_areas", metadata_path, errors, root)
         bio = _required_str(data, "bio", metadata_path, errors, root)
+        show_headshot = data.get("show_headshot", True)
+        if not isinstance(show_headshot, bool):
+            errors.append(f"{_rel(root, metadata_path)} field 'show_headshot' must be a boolean")
+            continue
+        if not show_headshot:
+            # Honour an explicit opt-out even if an old image remains on disk.
+            image_path = None
+        elif image_path is None:
+            errors.append(f"missing member image for {_rel(root, metadata_path)}")
+            continue
         if None in (name, join_date, affiliations, research_areas, bio):
             continue
         members.append(
@@ -107,7 +115,7 @@ def _load_members(root: Path, errors: list[str]) -> list[MemberEntry]:
                 name=name or "",
                 last_name=last_name or _infer_last_name(name or ""),
                 join_date=join_date or date.min,
-                image_path=_rel(root, image_path),
+                image_path=_rel(root, image_path) if image_path else None,
                 metadata_path=_rel(root, metadata_path),
                 affiliations=tuple(affiliations or ()),
                 research_areas=tuple(research_areas or ()),

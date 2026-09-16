@@ -69,6 +69,33 @@ class LoaderTests(unittest.TestCase):
 
             self.assertIn("invalid news slug", "\n".join(caught.exception.errors))
 
+    def test_headshot_opt_out_does_not_require_or_expose_an_image(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self._write_member(root, "no-photo", "No Photo", "2026-09-16")
+            metadata = root / "members" / "no-photo.toml"
+            metadata.write_text(metadata.read_text() + 'show_headshot = false\n')
+            self.assertIsNone(load_site(root).members[0].image_path)
+            (root / "members" / "no-photo.jpg").unlink()
+            self.assertIsNone(load_site(root).to_dict()['members'][0]['image_path'])
+
+    def test_missing_headshot_requires_explicit_opt_out(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self._write_member(root, "no-photo", "No Photo", "2026-09-16")
+            (root / "members" / "no-photo.jpg").unlink()
+            with self.assertRaisesRegex(SiteValidationError, "missing member image"):
+                load_site(root)
+
+    def test_headshot_preference_must_be_boolean(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self._write_member(root, "no-photo", "No Photo", "2026-09-16")
+            metadata = root / "members" / "no-photo.toml"
+            metadata.write_text(metadata.read_text() + 'show_headshot = "false"\n')
+            with self.assertRaisesRegex(SiteValidationError, "must be a boolean"):
+                load_site(root)
+
     def _write_text_entry(
         self,
         root: Path,

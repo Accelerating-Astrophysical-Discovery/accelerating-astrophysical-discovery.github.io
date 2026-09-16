@@ -1,0 +1,7 @@
+name = "Ik Siong Heng"
+last_name = "Heng"
+join_date = "2026-09-16"
+affiliations = ["University of Glasgow"]
+research_areas = ["Gravitational waves", "Multi-messenger transients"]
+bio = "Gravitational wave & multi-messenger detection and inference."
+show_headshot = false

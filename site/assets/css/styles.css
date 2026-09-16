@@ -235,6 +235,14 @@ img {
   line-height: 1.28;
 }
 
+.member-initials {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+}
+
 .member-facts div + div {
   margin-top: 0.55rem;
 }

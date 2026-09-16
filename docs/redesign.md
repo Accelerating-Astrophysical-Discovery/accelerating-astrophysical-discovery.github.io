@@ -13,6 +13,8 @@ members/<slug>.toml
 
 Member TOML requires `name`, `join_date`, `affiliations`, `research_areas`, and `bio`; `last_name` is optional but recommended for compound surnames. Lists sort by `join_date`, then by last name for matching dates.
 
+Only add profiles with explicit publication permission. Set `show_headshot = false` when a member opts out of a portrait: the same-stem image is then optional and is never copied into the generated site, even if it exists locally. The card displays initials instead. Without this explicit flag, a missing image remains a validation error. Keep raw registrations, consent records, and private coordination fields in ignored `data/`, not in public member files.
+
 News and research entries use matching Markdown/TOML pairs:
 
 ```text

@@ -1,0 +1,8 @@
+name = "Daniela Huppenkothen"
+last_name = "Huppenkothen"
+join_date = "2026-09-16"
+affiliations = ["University of Amsterdam"]
+research_areas = ["High-energy astrophysics", "Time-domain astronomy", "Statistical inference", "Machine learning"]
+# Bio and research areas inferred from https://orcid.org/0000-0002-1169-7486.
+bio = "Daniela Huppenkothen develops statistical and machine-learning methods for time-domain and high-energy astrophysics. Her work includes X-ray spectral timing, simulation-based inference, and representation learning for transient sources such as fast radio bursts."
+show_headshot = false

@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import unittest
+from tempfile import TemporaryDirectory
 from datetime import date
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from sitegen.content import Member, SiteConfig
+from sitegen.render import copy_member_images
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,6 +61,27 @@ class MembersRenderingTests(unittest.TestCase):
         )
 
         self.assertNotIn("Join the consortium", html)
+
+    def test_member_without_headshot_renders_initials_and_copies_no_image(self) -> None:
+        env = Environment(
+            loader=FileSystemLoader(ROOT / "site" / "templates"),
+            autoescape=select_autoescape(["html", "xml"]),
+        )
+        member = Member(
+            slug="jane-doe", name="Jane Doe", last_name="Doe",
+            join_date=date(2026, 9, 16), image_path=None,
+            metadata_path=ROOT / "jane-doe.toml", affiliations=["Institute"],
+            research_areas=["Astronomy"], bio="Studies the cosmos.",
+        )
+        html = env.get_template("members.html").render(
+            site=SiteConfig(), active="members", members=[member],
+        )
+        self.assertIn('class="member-portrait member-initials" aria-hidden="true">JD</div>', html)
+        self.assertNotIn('<img class="member-portrait"', html)
+        self.assertNotIn('src="None"', html)
+        with TemporaryDirectory() as temp:
+            copy_member_images(Path(temp), [member])
+            self.assertEqual(list((Path(temp) / "assets" / "members").iterdir()), [])
 
 
 if __name__ == "__main__":

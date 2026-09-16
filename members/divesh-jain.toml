@@ -1,0 +1,6 @@
+name = "Divesh Jain"
+last_name = "Jain"
+join_date = "2026-09-16"
+affiliations = ["Heidelberg University"]
+research_areas = ["Machine learning", "Cosmological simulations"]
+bio = "Hi! I am a postdoctoral researcher at Heidelberg University's Institute for Theoretical Physics, focusing on reionization-era cosmology. My research interests include physically motivated reionization models and machine learning methods that enable faster, more robust parameter estimation to exploit upcoming datasets."

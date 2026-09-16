@@ -13,7 +13,7 @@ class MemberEntry:
     name: str
     last_name: str
     join_date: date
-    image_path: str
+    image_path: str | None
     metadata_path: str
     affiliations: tuple[str, ...]
     research_areas: tuple[str, ...]

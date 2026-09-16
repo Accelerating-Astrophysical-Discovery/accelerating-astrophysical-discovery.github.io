@@ -9,7 +9,11 @@
     {% for member in members %}
       <article class="member-card defocus-item">
         <div class="member-portrait-column">
-          <img class="member-portrait" src="{{ member.image_url }}" alt="{{ member.name }}" loading="lazy">
+          {% if member.image_url %}
+            <img class="member-portrait" src="{{ member.image_url }}" alt="{{ member.name }}" loading="lazy">
+          {% else %}
+            <div class="member-portrait member-initials" aria-hidden="true">{{ member.initials }}</div>
+          {% endif %}
           <dl class="member-facts">
             <div>
               <dt>Affiliation</dt>

@@ -1,0 +1,6 @@
+name = "Pedro De la Torre Luque"
+last_name = "De la Torre Luque"
+join_date = "2026-09-16"
+affiliations = ["Universidad Autónoma de Madrid"]
+research_areas = ["Cosmic-ray propagation", "Indirect dark matter searches", "Antimatter in the Galaxy", "Diffuse gamma-ray and MeV astronomy", "Astroparticle physics", "Numerical simulations of cosmic-ray transport"]
+bio = "I am a Ramón y Cajal Research Fellow at the Universidad Autónoma de Madrid (UAM), specialised in cosmic-ray physics, dark matter searches, and diffuse astrophysical emissions. I am one of the lead developers of the DRAGON2 code — a state-of-the-art numerical framework for cosmic-ray transport and interactions — and serve as coordinator of the Dark Matter & Diffuse working group within the Fermi-LAT collaboration. My research addresses searches for exotic physics in astroparticle data, cosmic-ray propagation in astrophysical plasmas, antimatter production in the Galaxy, and MeV astronomy."

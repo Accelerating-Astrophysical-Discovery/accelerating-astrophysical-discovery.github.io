@@ -1,0 +1,7 @@
+name = "David Leonhard"
+last_name = "Leonhard"
+join_date = "2026-09-16"
+affiliations = ["University of Bonn", "Lamarr Institute"]
+research_areas = ["Galaxy clusters", "Machine learning", "Trustworthy AI"]
+bio = "David brings insight into data processing and the construction of end-to-end pipelines for the training and evaluation of machine learning models. He works with various data sources on galaxy clusters."
+show_headshot = false
