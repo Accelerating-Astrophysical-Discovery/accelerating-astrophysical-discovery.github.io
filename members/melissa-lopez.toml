@@ -1,0 +1,6 @@
+name = "Melissa Lopez"
+last_name = "Lopez"
+join_date = "2026-09-17"
+affiliations = ["Nikhef"]
+research_areas = ["Machine learning", "Gravitational-wave detector characterisation", "Gravitational-wave detection"]
+bio = "I am a postdoc in gravitational wave data analysis using machine learning."
