@@ -35,7 +35,7 @@ class MemberEntry:
 
 @dataclass(frozen=True)
 class TextEntry:
-    kind: Literal["essay", "news", "research"]
+    kind: Literal["essay", "news", "consortium"]
     slug: str
     title: str
     date_published: date
@@ -47,8 +47,7 @@ class TextEntry:
 
     @property
     def comment_term(self) -> str:
-        kind = "consortium" if self.kind == "research" else self.kind
-        return f"[{kind}/comments] {self.comment_id}"
+        return f"[{self.kind}/comments] {self.comment_id}"
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -69,13 +68,13 @@ class TextEntry:
 class BuildManifest:
     members: tuple[MemberEntry, ...] = field(default_factory=tuple)
     news: tuple[TextEntry, ...] = field(default_factory=tuple)
-    research: tuple[TextEntry, ...] = field(default_factory=tuple)
-    version: int = 1
+    consortium: tuple[TextEntry, ...] = field(default_factory=tuple)
+    version: int = 2
 
     def to_dict(self) -> dict[str, Any]:
         return {
             "version": self.version,
             "members": [member.to_dict() for member in self.members],
             "news": [entry.to_dict() for entry in self.news],
-            "research": [entry.to_dict() for entry in self.research],
+            "consortium": [entry.to_dict() for entry in self.consortium],
         }

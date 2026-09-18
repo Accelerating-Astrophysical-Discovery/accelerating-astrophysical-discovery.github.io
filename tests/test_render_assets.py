@@ -14,7 +14,7 @@ class RenderAssetTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             output = root / "dist"
-            entry = root / "research" / "paper"
+            entry = root / "consortium" / "paper"
             (entry / "images").mkdir(parents=True)
             source = entry / "paper.md"
             metadata = entry / "paper.toml"
@@ -23,7 +23,7 @@ class RenderAssetTests(unittest.TestCase):
             metadata.write_text("metadata", encoding="utf-8")
             asset.write_bytes(b"image")
             writing = Writing(
-                section="research",
+                section="consortium",
                 slug="paper",
                 title="Paper",
                 date_published=date(2026, 1, 1),
@@ -36,9 +36,12 @@ class RenderAssetTests(unittest.TestCase):
 
             copy_writing_assets(root, output, [writing])
 
-            self.assertTrue((output / "assets" / "content" / "research" / "paper" / "images" / "figure.png").exists())
-            self.assertFalse((output / "assets" / "content" / "research" / "paper" / "paper.md").exists())
-            self.assertFalse((output / "assets" / "content" / "research" / "paper" / "paper.toml").exists())
+            for section in ("consortium", "research"):
+                with self.subTest(section=section):
+                    target = output / "assets" / "content" / section / "paper"
+                    self.assertEqual((target / "images" / "figure.png").read_bytes(), b"image")
+                    self.assertFalse((target / "paper.md").exists())
+                    self.assertFalse((target / "paper.toml").exists())
 
 
 if __name__ == "__main__":

@@ -59,7 +59,7 @@ class Writing:
             kind = "news"
         elif self.section == "essays":
             kind = "essay"
-        elif self.section == "research":
+        elif self.section == "consortium":
             kind = "consortium"
         else:
             kind = self.section
@@ -100,7 +100,7 @@ class SiteData:
     config: SiteConfig
     members: list[Member]
     news: list[Writing]
-    research: list[Writing]
+    consortium: list[Writing]
 
 
 def parse_iso_date(value: str, field_name: str, path: Path) -> date:
@@ -130,7 +130,7 @@ def collect_writings(
     elif section == "essays":
         kind = "essay"
     else:
-        kind = "research"
+        kind = "consortium"
     errors: list[str] = []
     comment_ids: dict[str, str] = {}
     root = Path(root).resolve()

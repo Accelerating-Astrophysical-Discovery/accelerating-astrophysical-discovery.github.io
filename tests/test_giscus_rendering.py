@@ -56,9 +56,9 @@ class GiscusRenderingTests(unittest.TestCase):
         self.assertIn('data-loading="lazy"', html)
         self.assertNotIn("data-term=", html)
 
-    def test_consortium_comments_use_repo_section_name(self) -> None:
+    def test_consortium_comments_preserve_legacy_comment_id(self) -> None:
         item = Writing(
-            section="research",
+            section="consortium",
             slug="hello",
             title="Hello",
             date_published=date(2026, 1, 1),

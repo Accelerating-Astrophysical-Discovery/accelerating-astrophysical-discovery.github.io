@@ -19,18 +19,18 @@
     </div>
     <div>
       <dt>Download</dt>
-      <dd><a href="/assets/content/research/workshop-materials/workshop-participant-booklet.pdf" download>Participant booklet (PDF)</a></dd>
+      <dd><a href="/assets/content/consortium/workshop-materials/workshop-participant-booklet.pdf" download>Participant booklet (PDF)</a></dd>
     </div>
   </dl>
 </section>
 
 The participant booklet brings the workshop’s essential material together in one place: the consortium’s two pillars, the relevancy graph, ways to prepare, practical information, each day’s purpose, and the full timetable for the week.
 
-<p><a href="/assets/content/research/workshop-materials/workshop-participant-booklet.pdf" download>Download the participant booklet (PDF)</a></p>
+<p><a href="/assets/content/consortium/workshop-materials/workshop-participant-booklet.pdf" download>Download the participant booklet (PDF)</a></p>
 
 ## Before the workshop
 
-See [“Before Leiden” in the participant booklet](/assets/content/research/workshop-materials/workshop-participant-booklet.pdf#page=6) for what to think about and bring.
+See [“Before Leiden” in the participant booklet](/assets/content/consortium/workshop-materials/workshop-participant-booklet.pdf#page=6) for what to think about and bring.
 
 ## Practical matters
 

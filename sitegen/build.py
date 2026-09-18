@@ -14,8 +14,8 @@ def load_site(root: Path, production: bool = False) -> SiteData:
     seen_comment_ids: set[str] = set()
     members = collect_members(root)
     news = collect_writings(root, "news", render_markdown, seen_comment_ids)
-    research = collect_writings(root, "research", render_markdown, seen_comment_ids)
-    return SiteData(config=config, members=members, news=news, research=research)
+    consortium = collect_writings(root, "consortium", render_markdown, seen_comment_ids)
+    return SiteData(config=config, members=members, news=news, consortium=consortium)
 
 
 def build(root: Path, output: Path, production: bool = False) -> SiteData:

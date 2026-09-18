@@ -43,7 +43,7 @@ def main() -> int:
 
     summary = (
         f"loaded {len(manifest.members)} members, "
-        f"{len(manifest.news)} news entries, {len(manifest.research)} research entries"
+        f"{len(manifest.news)} news entries, {len(manifest.consortium)} consortium entries"
     )
     if args.validate_only:
         print(summary)

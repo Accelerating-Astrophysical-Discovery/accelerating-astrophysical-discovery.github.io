@@ -32,13 +32,13 @@ def load_site(root: str | Path) -> BuildManifest:
     comment_ids: dict[str, str] = {}
     members = _load_members(root_path, errors)
     news = _load_text_collection(root_path, "news", "news", errors, comment_ids)
-    research = _load_text_collection(root_path, "research", "research", errors, comment_ids)
+    consortium = _load_text_collection(root_path, "consortium", "consortium", errors, comment_ids)
     if errors:
         raise SiteValidationError(errors)
     return BuildManifest(
         members=tuple(members),
         news=tuple(news),
-        research=tuple(research),
+        consortium=tuple(consortium),
     )
 
 
@@ -141,8 +141,8 @@ def _infer_last_name(name: str) -> str:
 
 def _load_text_collection(
     root: Path,
-    directory: Literal["essays", "news", "research"],
-    kind: Literal["essay", "news", "research"],
+    directory: Literal["essays", "news", "consortium"],
+    kind: Literal["essay", "news", "consortium"],
     errors: list[str],
     comment_ids: dict[str, str],
 ) -> list[TextEntry]:

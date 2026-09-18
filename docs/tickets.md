@@ -18,7 +18,7 @@ Build the creamy minimalist landing page, writing indexes/details, defocus effec
 
 ## 5. Migration
 
-Copy existing `_posts/` and `inprep_posts/` into `research/`, strip Jekyll front matter, convert Codecogs links to LaTeX, and archive old CV/theme material in `old_content/`.
+Copy existing `_posts/` and `inprep_posts/` into `consortium/` (formerly `research/`), strip Jekyll front matter, convert Codecogs links to LaTeX, and archive old CV/theme material in `old_content/`.
 
 ## 6. Review
 

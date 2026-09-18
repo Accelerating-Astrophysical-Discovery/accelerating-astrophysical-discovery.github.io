@@ -17,17 +17,31 @@ class LoaderTests(unittest.TestCase):
             self._write_text_entry(root, "news", "older", "Older", "2021-01-01")
             self._write_text_entry(root, "news", "alpha", "Alpha", "2023-02-01")
             self._write_text_entry(root, "news", "beta", "Beta", "2023-02-01")
-            self._write_text_entry(root, "research", "paper", "Paper", "2024-01-05")
+            self._write_text_entry(root, "consortium", "paper", "Paper", "2024-01-05")
 
             manifest = load_site(root)
 
             self.assertEqual([member.slug for member in manifest.members], ["zara-alpha", "aaron-zulu", "late"])
             self.assertEqual([entry.slug for entry in manifest.news], ["alpha", "beta", "older"])
-            self.assertIn(r"\(x=1\)", manifest.research[0].html)
+            self.assertIn(r"\(x=1\)", manifest.consortium[0].html)
             self.assertEqual(
-                manifest.research[0].comment_term,
-                "[consortium/comments] research/paper",
+                manifest.consortium[0].comment_term,
+                "[consortium/comments] consortium/paper",
             )
+            self.assertEqual(manifest.consortium[0].kind, "consortium")
+            self.assertIn("consortium", manifest.to_dict())
+            self.assertNotIn("research", manifest.to_dict())
+
+    def test_renamed_consortium_keeps_explicit_legacy_comment_id(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self._write_text_entry(
+                root, "consortium", "paper", "Paper", "2024-01-05",
+                comment_id="research/paper",
+            )
+            entry = load_site(root).consortium[0]
+            self.assertEqual(entry.markdown_path, "consortium/paper/paper.md")
+            self.assertEqual(entry.comment_term, "[consortium/comments] research/paper")
 
     def test_strict_validation_reports_missing_pairs_invalid_dates_and_duplicates(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
@@ -44,7 +58,7 @@ class LoaderTests(unittest.TestCase):
             )
             self._write_text_entry(
                 root,
-                "research",
+                "consortium",
                 "same-comment",
                 "Same",
                 "2020-01-02",

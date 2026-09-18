@@ -1,6 +1,6 @@
 # Workshop Site Redesign
 
-This repository is moving from a Beautiful Jekyll CV-style site to a Python-generated static workshop site for members, news, and research. The generated site is deployed from `dist/` by GitHub Actions and keeps source content in human-editable TOML and Markdown files.
+This repository is moving from a Beautiful Jekyll CV-style site to a Python-generated static workshop site for members, news, and consortium updates. The generated site is deployed from `dist/` by GitHub Actions and keeps source content in human-editable TOML and Markdown files.
 
 ## Content Model
 
@@ -15,16 +15,18 @@ Member TOML requires `name`, `join_date`, `affiliations`, `research_areas`, and 
 
 Only add profiles with explicit publication permission. Set `show_headshot = false` when a member opts out of a portrait: the same-stem image is then optional and is never copied into the generated site, even if it exists locally. The card displays initials instead. Without this explicit flag, a missing image remains a validation error. Keep raw registrations, consent records, and private coordination fields in ignored `data/`, not in public member files.
 
-News and research entries use matching Markdown/TOML pairs:
+News and consortium entries use matching Markdown/TOML pairs:
 
 ```text
 news/<slug>/<slug>.md
 news/<slug>/<slug>.toml
-research/<slug>/<slug>.md
-research/<slug>/<slug>.toml
+consortium/<slug>/<slug>.md
+consortium/<slug>/<slug>.toml
 ```
 
 Writing TOML requires `title` and `date_published`. Lists sort newest-first, then alphabetically for matching dates.
+
+The source folder and manifest collection are named `consortium`, matching the existing `/consortium/` page routes. Build-manifest schema version 2 uses the `consortium` key and entry kind in place of `research`. Existing explicit `comment_id` values retain their historical `research/...` identifiers to preserve discussion threads. Assets use `/assets/content/consortium/...`; the build also copies them to their former `/assets/content/research/...` URLs so shared booklet downloads remain valid.
 
 ## Rendering
 

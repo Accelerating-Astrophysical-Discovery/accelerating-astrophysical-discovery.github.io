@@ -21,7 +21,7 @@ def build_site(data: SiteData, root: Path, output: Path) -> None:
     (output / ".nojekyll").write_text("", encoding="utf-8")
     copy_static_assets(root, output)
     copy_member_images(output, data.members)
-    copy_writing_assets(root, output, data.news + data.research)
+    copy_writing_assets(root, output, data.news + data.consortium)
 
     env = Environment(
         loader=FileSystemLoader(root / "site" / "templates"),
@@ -31,7 +31,7 @@ def build_site(data: SiteData, root: Path, output: Path) -> None:
     env.globals["site"] = data.config
 
     render_page(env, output / "index.html", "landing.html", active="home")
-    render_writing_section(env, output, "consortium", "Consortium", data.research)
+    render_writing_section(env, output, "consortium", "Consortium", data.consortium)
     render_writing_section(env, output, "news", "News", data.news)
     render_page(
         env,
@@ -75,7 +75,10 @@ def copy_member_images(output: Path, members: list[Member]) -> None:
 
 def copy_writing_assets(root: Path, output: Path, writings: list[Writing]) -> None:
     for writing in writings:
-        target = output / "assets" / "content" / writing.section / writing.slug
+        targets = [output / "assets" / "content" / writing.section / writing.slug]
+        if writing.section == "consortium":
+            # Keep previously shared booklet and image URLs working after the rename.
+            targets.append(output / "assets" / "content" / "research" / writing.slug)
         excluded = {
             writing.markdown_path.resolve(),
             writing.metadata_path.resolve(),
@@ -84,9 +87,10 @@ def copy_writing_assets(root: Path, output: Path, writings: list[Writing]) -> No
             if not path.is_file() or path.resolve() in excluded:
                 continue
             relative = path.relative_to(writing.markdown_path.parent)
-            destination = target / relative
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(path, destination)
+            for target in targets:
+                destination = target / relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(path, destination)
 
 
 def render_page(env: Environment, path: Path, template: str, **context) -> None:
@@ -123,7 +127,7 @@ def write_manifest(output: Path, data: SiteData) -> None:
     manifest = {
         "members": [member.slug for member in data.members],
         "news": [item.slug for item in data.news],
-        "consortium": [item.slug for item in data.research],
+        "consortium": [item.slug for item in data.consortium],
     }
     (output / "site-manifest.json").write_text(
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8"

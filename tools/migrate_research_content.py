@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Prepare legacy Jekyll posts for the redesigned research section.
+"""Prepare legacy Jekyll posts for the consortium section.
 
 The command is read-only by default. Pass --write to create
-research/<slug>/<slug>.md and research/<slug>/<slug>.toml files.
+consortium/<slug>/<slug>.md and consortium/<slug>/<slug>.toml files.
 """
 
 from __future__ import annotations
@@ -335,7 +335,7 @@ def display_path(path: Path, repo_root: Path) -> str:
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Convert legacy Jekyll posts into research content files."
+        description="Convert legacy Jekyll posts into consortium content files."
     )
     parser.add_argument(
         "--repo-root",
@@ -353,8 +353,8 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument(
         "--target",
         type=Path,
-        default=Path("research"),
-        help="Target research directory, relative to repo root unless absolute.",
+        default=Path("consortium"),
+        help="Target consortium directory, relative to repo root unless absolute.",
     )
     parser.add_argument(
         "--write",
@@ -405,7 +405,7 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     mode = "write" if args.write else "dry-run"
-    print(f"{mode}: prepared {len(migrated_posts)} research entries")
+    print(f"{mode}: prepared {len(migrated_posts)} consortium entries")
     for post in migrated_posts:
         target = target_root / post.slug
         print(
@@ -423,7 +423,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  warning: {warning}")
 
     if not args.write:
-        print("No files were written. Re-run with --write to create research entries.")
+        print("No files were written. Re-run with --write to create consortium entries.")
     return 0
 
 
