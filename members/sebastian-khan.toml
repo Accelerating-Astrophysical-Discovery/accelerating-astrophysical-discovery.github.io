@@ -1,0 +1,7 @@
+name = "Sebastian Khan"
+last_name = "Khan"
+join_date = "2026-09-18"
+affiliations = ["Not specified"]
+research_areas = ["Gravitational-wave modelling", "Black-hole binaries", "Numerical relativity", "Probabilistic inference", "Machine learning"]
+# Bio and research areas inferred from https://orcid.org/0000-0003-4953-5754.
+bio = "Sebastian Khan works on gravitational-wave modelling and inference, with a focus on signals from merging black holes. His research includes precessing-binary waveform models, numerical-relativity simulations, probabilistic modelling, and neural-network surrogate models."

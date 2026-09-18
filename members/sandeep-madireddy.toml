@@ -1,0 +1,6 @@
+name = "Sandeep Madireddy"
+last_name = "Madireddy"
+join_date = "2026-09-18"
+affiliations = ["Argonne National Laboratory", "NSF-Simons SkAI Institute"]
+research_areas = ["Multimodal AI", "Probabilistic AI", "AI for Science"]
+bio = "Sandeep Madireddy is a computer scientist in the Mathematics and Computer Science Division at Argonne National Laboratory, and a core member of the NSF-Simons SkAI Institute. His research spans multimodal and large-scale generative AI applied to diverse scientific data modalities, evaluation and safety of frontier AI models, inference-time and adaptive compute for resource-efficient reasoning, and uncertainty quantification."

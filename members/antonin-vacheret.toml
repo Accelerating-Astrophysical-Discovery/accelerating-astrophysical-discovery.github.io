@@ -1,0 +1,6 @@
+name = "Antonin Vacheret"
+last_name = "Vacheret"
+join_date = "2026-09-18"
+affiliations = ["LPC Caen"]
+research_areas = ["Neutrino physics", "Astroparticle physics", "Particle detector instrumentation", "Deep learning", "Representation learning", "Agentic AI"]
+bio = "Antonin has a passion for fundamental physics with expertise in experimental neutrino physics. He has been applying deep learning methods for a decade on various datasets and problems ranging from particle-detector reconstruction to applications in the nuclear sector."
