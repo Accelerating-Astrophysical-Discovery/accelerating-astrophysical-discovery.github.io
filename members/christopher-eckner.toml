@@ -1,0 +1,8 @@
+name = "Christopher Eckner"
+last_name = "Eckner"
+join_date = "2026-09-19"
+affiliations = ["Instituto de Astrofísica de Canarias"]
+research_areas = ["Dark matter searches", "Gamma-ray astronomy", "Astroparticle physics", "Simulation-based inference"]
+# Bio synthesised from the publications linked to https://orcid.org/0000-0002-5135-2909.
+bio = "Christopher Eckner is an astroparticle physicist at the Instituto de Astrofísica de Canarias. His research focuses on indirect dark matter searches and gamma-ray astronomy, including studies of the Galactic Centre and prospects for the Cherenkov Telescope Array Observatory. He also works on simulation-based inference and neural-network methods for analysing gamma-ray sources and pulsar populations."
+show_headshot = false
