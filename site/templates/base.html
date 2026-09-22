@@ -24,6 +24,12 @@
     <main id="content">
       {% block content %}{% endblock %}
     </main>
+    <footer class="site-footer">
+      <nav aria-label="Legal">
+        <a href="/privacy/" {% if active == "privacy" %}aria-current="page"{% endif %}>Privacy policy</a>
+        <a href="/terms/" {% if active == "terms" %}aria-current="page"{% endif %}>Terms of service</a>
+      </nav>
+    </footer>
     <script src="/assets/katex/katex.min.js" defer></script>
     <script src="/assets/katex/auto-render.min.js" defer></script>
     <script src="/assets/js/site.js" defer></script>

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} | {{ site.title }}{% endblock %}
+{% block body_class %}policy-page-body{% endblock %}
+{% block content %}
+  <article class="policy-page">
+    <header class="writing-header">
+      <a class="section-return" href="/">Accelerating Astrophysical Discovery</a>
+      <h1>{{ title }}</h1>
+      <p>Last updated: <time datetime="2026-09-22">22 September 2026</time></p>
+    </header>
+    <div class="prose">
+      {% block policy_content %}{% endblock %}
+    </div>
+  </article>
+{% endblock %}

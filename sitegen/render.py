@@ -41,6 +41,11 @@ def build_site(data: SiteData, root: Path, output: Path) -> None:
         members=data.members,
     )
     render_page(env, output / "404.html", "404.html", active="")
+    for slug, title in (("privacy", "Privacy policy"), ("terms", "Terms of service")):
+        render_page(
+            env, output / slug / "index.html", f"{slug}.html",
+            active=slug, title=title,
+        )
     write_manifest(output, data)
 
 

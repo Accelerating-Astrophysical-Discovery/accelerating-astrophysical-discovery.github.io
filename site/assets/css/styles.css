@@ -63,7 +63,44 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--paper);
+}
+
+#content {
+  flex: 1;
+}
+
+.site-footer {
+  width: min(920px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.2rem 3rem 1.8rem;
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  text-align: center;
+}
+
+.site-footer a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.site-footer a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.site-footer a[aria-current="page"] {
+  font-weight: 700;
 }
 
 a {
@@ -156,6 +193,23 @@ img {
   font-size: clamp(2rem, 5vw, 4.7rem);
   font-weight: 700;
   line-height: 1;
+}
+
+.landing-page #content {
+  display: flex;
+}
+
+.landing-page .landing {
+  width: 100%;
+  min-height: 0;
+  padding: 5rem 1rem 3rem;
+}
+
+.landing-description {
+  max-width: 42rem;
+  margin: 0 auto 1.5rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.5;
 }
 
 .landing-link {
@@ -347,6 +401,16 @@ img {
 .writing-detail {
   width: min(780px, calc(100vw - 2rem));
   margin: 16vh auto 8vh;
+}
+
+.policy-page {
+  width: min(780px, calc(100% - 2rem));
+  margin: max(6rem, 12vh) auto 4rem;
+}
+
+.policy-page .prose {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  overflow-wrap: anywhere;
 }
 
 .section-return {
