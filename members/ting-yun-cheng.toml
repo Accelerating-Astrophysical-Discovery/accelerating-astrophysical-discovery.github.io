@@ -1,7 +1,0 @@
-name = "Ting-Yun Cheng"
-last_name = "Cheng"
-join_date = "2026-09-16"
-affiliations = ["Kapteyn Institute (University of Groningen)"]
-research_areas = ["Galaxy morphology", "Machine learning", "Representation learning", "Astronomical surveys"]
-# Bio and research areas inferred from https://orcid.org/0000-0001-8670-4495.
-bio = "Ting-Yun Cheng applies machine learning to galaxy surveys and astronomical image analysis. Her work includes galaxy morphology, unsupervised representation learning, strong-lens searches, and the identification of rare galaxies."
