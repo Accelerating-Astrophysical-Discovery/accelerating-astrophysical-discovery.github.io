@@ -1,9 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ site.title }}{% endblock %}</title>
+    {% set share_title = social_title | default((title ~ " | " ~ site.title) if title else site.title) %}
+    {% set share_image = site.base_url.rstrip('/') ~ "/assets/branding/icon-512.png" %}
+    <meta name="description" content="{{ site.description }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ share_title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:type" content="{{ social_type | default('website') }}">
+    <meta property="og:image" content="{{ share_image }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="A star connected to constellation nodes on a slate background — the Accelerating Astrophysical Discovery icon.">
+    {% if site.base_url and page_path %}
+      <link rel="canonical" href="{{ site.base_url.rstrip('/') }}{{ page_path }}">
+      <meta property="og:url" content="{{ site.base_url.rstrip('/') }}{{ page_path }}">
+    {% endif %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ share_title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="{{ share_image }}">
+    <meta name="twitter:image:alt" content="Accelerating Astrophysical Discovery constellation icon.">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" href="/assets/branding/favicon-48.png" sizes="48x48">
+    <link rel="icon" type="image/svg+xml" href="/assets/branding/icon.svg" sizes="any">
+    <link rel="apple-touch-icon" href="/assets/branding/apple-touch-icon.png" sizes="180x180">
     <meta name="color-scheme" content="light">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/katex/katex.min.css">

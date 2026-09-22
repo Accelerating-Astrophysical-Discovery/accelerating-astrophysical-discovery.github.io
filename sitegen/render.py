@@ -30,7 +30,7 @@ def build_site(data: SiteData, root: Path, output: Path) -> None:
     env.filters["date_long"] = lambda value: value.strftime("%B %-d, %Y")
     env.globals["site"] = data.config
 
-    render_page(env, output / "index.html", "landing.html", active="home")
+    render_page(env, output / "index.html", "landing.html", active="home", page_path="/")
     render_writing_section(env, output, "consortium", "Consortium", data.consortium)
     render_writing_section(env, output, "news", "News", data.news)
     render_page(
@@ -38,13 +38,18 @@ def build_site(data: SiteData, root: Path, output: Path) -> None:
         output / "members" / "index.html",
         "members.html",
         active="members",
+        title="Members",
+        page_path="/members/",
         members=data.members,
     )
-    render_page(env, output / "404.html", "404.html", active="")
+    render_page(
+        env, output / "404.html", "404.html", active="",
+        title="Page not found", page_path="/404.html",
+    )
     for slug, title in (("privacy", "Privacy policy"), ("terms", "Terms of service")):
         render_page(
             env, output / slug / "index.html", f"{slug}.html",
-            active=slug, title=title,
+            active=slug, title=title, page_path=f"/{slug}/",
         )
     write_manifest(output, data)
 
@@ -65,6 +70,10 @@ def copy_static_assets(root: Path, output: Path) -> None:
     site_assets = root / "site" / "assets"
     if site_assets.exists():
         shutil.copytree(site_assets, output / "assets", dirs_exist_ok=True)
+    favicon = site_assets / "branding" / "favicon.ico"
+    if favicon.exists():
+        # Browsers also request this conventional path without consulting HTML.
+        shutil.copy2(favicon, output / "favicon.ico")
     for legacy_dir in [root / "assets" / "img", root / "assets" / "pdf"]:
         if legacy_dir.exists():
             shutil.copytree(legacy_dir, output / "assets" / legacy_dir.name, dirs_exist_ok=True)
@@ -115,6 +124,7 @@ def render_writing_section(
         section=section,
         title=title,
         items=items,
+        page_path=f"/{section}/",
     )
     for item in items:
         render_page(
@@ -125,6 +135,9 @@ def render_writing_section(
             section=section,
             title=title,
             item=item,
+            page_path=f"/{section}/{item.slug}/",
+            social_title=f"{item.title} | {env.globals['site'].title}",
+            social_type="article",
         )
 
 
