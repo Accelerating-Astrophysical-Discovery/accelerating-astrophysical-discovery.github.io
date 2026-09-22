@@ -80,10 +80,14 @@ class PolicyPageTests(unittest.TestCase):
         for section in ("news", "consortium"):
             self.assertTrue({"privacy", "terms"}.isdisjoint(manifest[section]))
 
-    def test_homepage_describes_signup_workflow(self) -> None:
+    def test_homepage_describes_consortium(self) -> None:
         html = (self.output / "index.html").read_text(encoding="utf-8")
-        self.assertIn("consortium signup through Google Forms", html)
-        self.assertIn("optional public member profiles", html)
+        self.assertIn(
+            '<p class="landing-description">The open-science consortium steering '
+            'how humans and machines will jointly study the cosmos.</p>',
+            html,
+        )
+        self.assertNotIn("This site shares our work and supports", html)
 
 
 if __name__ == "__main__":
