@@ -1,0 +1,7 @@
+name = "Thomas Vuillaume"
+last_name = "Vuillaume"
+join_date = "2026-09-22"
+affiliations = ["Laboratoire d'Annecy de Physique des Particules (USMB/CNRS)"]
+research_areas = ["Astroparticle", "CTAO", "AI", "Deep Learning", "Research Software"]
+# Portrait source: https://www.malt.fr/profile/thomasvuillaume
+bio = "Astrophysicist turned data and AI scientist, I am a research engineer at CNRS/LAPP working at the interface of astroparticle physics, machine learning and scientific software. Over the past years, I have led the development of GammaLearn, a research programme focused on deep learning for the reconstruction of Imaging Atmospheric Cherenkov Telescope data, in particular for CTAO/LST-1. I am also deeply involved in Open Science and research software quality and publication through several European projects."
