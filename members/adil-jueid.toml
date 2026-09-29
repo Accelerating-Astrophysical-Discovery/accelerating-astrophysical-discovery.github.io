@@ -1,0 +1,7 @@
+name = "Adil Jueid"
+last_name = "Jueid"
+join_date = "2026-09-25"
+affiliations = ["Center for AI and Natural Sciences, KIAS, Seoul, South Korea"]
+research_areas = ["Particle Physics", "Machine Learning in Physics", "Astroparticle Physics"]
+# Portrait source: https://gambitbsm.org/community/members/
+bio = "I work on particle physics phenomenology and dark-matter physics with emphasis on improvement on theoretical predictions, and accelerating discovery prospects with AI methods."
