@@ -4,16 +4,16 @@ Science was not built to work with AI. Its workflows, infrastructure, and norms 
 
 ## Our two pillars
 
-### Designing Science 2.0
+### Formalising science
 
-We aim to design how humans and machines will do science together: how they develop ideas, test hypotheses, evaluate evidence, and share understanding. This includes the tools, infrastructure, and culture needed for effective collaboration, with humans steering scientific priorities and exercising judgement.
+We aim to make the structure of science explicit: its concepts, models, assumptions, hypotheses, evidence, and the relationships between them. A shared scientific formalism should let humans and machines express ideas, trace how claims are supported or challenged, and test proposed connections, with uncertainty and empirical validation at its core.
 
-### Ensuring control over the technical substrate
+### Guiding a multimodal joint-representation reasoning model
 
-We aim to ensure complete control over the technical substrate needed for human–machine science, whether developed within the consortium or in collaboration with others. This means being able to inspect, adapt, and direct the models and infrastructure according to scientific needs.
+We aim to guide the development of a multimodal joint-representation reasoning model capable of accelerating the discovery of new links within this scientific formalism. By learning across observations, simulations, language, and their context, the model should help researchers propose and test relationships that might otherwise remain unexplored.
 
-A central capability is a generative joint-representation model that connects heterogeneous observations, simulations, and their context. Its embeddings and generative capabilities should enable reasoning models to understand and work with physical data, helping researchers explore the cosmos at a scale no individual can manage.
+The formalisation and the model go hand in hand in physics, much as Lean and LLMs do in mathematics. The formalism gives reasoning a shared structure; the model helps explore new connections within it. In physics, those connections must also be tested against empirical evidence. Neither pillar is developed in isolation: each informs the other.
 
 ## Accelerating serendipity, in a way that is healthy for science
 
-Our ultimate goal is to accelerate serendipity: to help researchers uncover unexpected connections and connect and test ideas faster. We want to guide a future in which human–machine collaboration deepens our understanding of the universe while preserving scientific rigour, transparency, reproducibility, and the ability to teach what we learn to the next generation.
+Our ultimate goal is to accelerate serendipity: to help researchers uncover unexpected connections and test ideas faster. We want to guide a future in which human–machine collaboration deepens our understanding of the universe, with humans steering scientific priorities and exercising judgement, while preserving scientific rigour, transparency, reproducibility, and the ability to teach what we learn to the next generation.
