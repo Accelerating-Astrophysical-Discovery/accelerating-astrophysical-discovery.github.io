@@ -8,9 +8,11 @@ Science was not built to work with AI. Its workflows, infrastructure, and norms 
 
 We aim to design how humans and machines will do science together: how they develop ideas, test hypotheses, evaluate evidence, and share understanding. This includes the tools, infrastructure, and culture needed for effective collaboration, with humans steering scientific priorities and exercising judgement.
 
-### Building a generative joint-representation model
+### Ensuring control over the technical substrate
 
-We aim to create a model that learns a shared representation of heterogeneous physical data, connecting observations, simulations, and their context. Its embeddings and generative capabilities should enable reasoning models to understand and work with physical data, helping researchers explore the cosmos at a scale no individual can manage.
+We aim to ensure complete control over the technical substrate needed for human–machine science, whether developed within the consortium or in collaboration with others. This means being able to inspect, adapt, and direct the models and infrastructure according to scientific needs.
+
+A central capability is a generative joint-representation model that connects heterogeneous observations, simulations, and their context. Its embeddings and generative capabilities should enable reasoning models to understand and work with physical data, helping researchers explore the cosmos at a scale no individual can manage.
 
 ## Accelerating serendipity, in a way that is healthy for science
 
