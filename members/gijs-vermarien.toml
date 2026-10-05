@@ -1,0 +1,7 @@
+name = "Gijs Vermariën"
+last_name = "Vermariën"
+join_date = "2026-10-01"
+affiliations = ["SURF"]
+research_areas = ["AI4Science", "Astrochemistry", "Computational (astro)physics", "Differentiable Modeling"]
+# Portrait source: https://vermarien.com/ (links to the submitted LinkedIn profile).
+bio = "Gijs worked on Machine Learning for Astrochemical Modeling as part of his PhD. He now works at SURF, which houses the National Dutch HPC facility, where he focuses on AI4Science."

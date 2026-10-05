@@ -1,0 +1,7 @@
+name = "Juan R. Diaz Santos"
+last_name = "Diaz Santos"
+join_date = "2026-09-30"
+affiliations = ["Universitat de València"]
+research_areas = ["Neutrino Physics", "Particle Physics", "Astroparticle Physics", "Theoretical Physics", "Beyond the Standard Model", "Neutrino Oscillations", "Computational Physics", "Statistical Inference", "Scientific Machine Learning", "Astrophysics"]
+bio = "Physicist with a PhD in Communications and a background in astrophysics and theoretical physics. My research interests focus on neutrino physics, particle astrophysics, and scientific computing, with particular emphasis on numerical simulations, statistical inference, and machine-learning methods."
+show_headshot = false
