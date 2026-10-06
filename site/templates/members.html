@@ -4,6 +4,9 @@
 {% block content %}
   <section class="section-heading defocus-scope">
     <h1 class="defocus-item">Members</h1>
+    {% if site.membership_form_url %}
+      <p class="member-signup-note defocus-item">Interested in joining? The signup link is at the <a href="#join-consortium">bottom of this page</a>.</p>
+    {% endif %}
   </section>
   <section class="member-list defocus-scope" aria-label="Consortium members">
     {% for member in members %}
@@ -36,7 +39,7 @@
     {% endfor %}
   </section>
   {% if site.membership_form_url %}
-    <section class="member-join defocus-scope" aria-labelledby="member-join-title">
+    <section id="join-consortium" class="member-join defocus-scope" aria-labelledby="member-join-title">
       <div class="defocus-item">
         <p class="member-join-kicker">Contribute to the consortium</p>
         <h2 id="member-join-title">Bring your perspective</h2>

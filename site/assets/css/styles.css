@@ -261,6 +261,17 @@ img {
   margin: 0 auto clamp(4rem, 10vh, 7rem);
 }
 
+.member-signup-note {
+  margin: 1.2rem 0 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.member-signup-note a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .member-card {
   display: grid;
   grid-template-columns: max-content minmax(0, 1fr);

@@ -78,6 +78,8 @@ class MetadataTests(unittest.TestCase):
         for page in self.output.rglob("*.html"):
             relative = page.relative_to(self.output).as_posix()
             route = "/" + relative.removesuffix("index.html")
+            if route.startswith("/consortium/"):
+                route = route.replace("/consortium/", "/news/", 1)
             expected = self.data.config.base_url + route
             with self.subTest(route=route):
                 head = self.read_head(page)
@@ -89,7 +91,7 @@ class MetadataTests(unittest.TestCase):
 
     def test_article_previews_use_readable_titles_without_changing_comment_ids(self) -> None:
         for item in self.data.news + self.data.consortium:
-            path = self.output / item.section / item.slug / "index.html"
+            path = self.output / "news" / item.slug / "index.html"
             head = self.read_head(path)
             self.assertEqual(head.meta["og:title"], [f"{item.title} | {self.data.config.title}"])
             self.assertEqual(head.meta["og:type"], ["article"])

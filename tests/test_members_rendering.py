@@ -47,6 +47,11 @@ class MembersRenderingTests(unittest.TestCase):
         self.assertIn('href="https://docs.google.com/forms/example"', html)
         self.assertIn(">Join the consortium</a>", html)
         self.assertIn("permission before any profile information", html)
+        self.assertIn("Interested in joining? The signup link is at the", html)
+        self.assertIn('href="#join-consortium">bottom of this page</a>', html)
+        self.assertIn('id="join-consortium"', html)
+        self.assertLess(html.index('href="#join-consortium"'), html.index('class="member-list'))
+        self.assertGreater(html.index('id="join-consortium"'), html.index('class="member-list'))
 
     def test_join_prompt_is_hidden_without_a_form_url(self) -> None:
         env = Environment(
@@ -61,6 +66,8 @@ class MembersRenderingTests(unittest.TestCase):
         )
 
         self.assertNotIn("Join the consortium", html)
+        self.assertNotIn("Interested in joining?", html)
+        self.assertNotIn('href="#join-consortium"', html)
 
     def test_member_without_headshot_renders_initials_and_copies_no_image(self) -> None:
         env = Environment(

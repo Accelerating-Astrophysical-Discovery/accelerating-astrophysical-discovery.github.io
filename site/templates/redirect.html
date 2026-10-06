@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} | {{ site.title }}{% endblock %}
+{% block head %}
+  <meta http-equiv="refresh" content="0; url={{ page_path }}">
+  <script>window.location.replace({{ page_path | tojson }} + window.location.search + window.location.hash);</script>
+{% endblock %}
+{% block content %}
+  <section class="section-heading">
+    <h1>This page has moved</h1>
+    <p><a href="{{ page_path }}">Continue to {{ title }}</a>.</p>
+  </section>
+{% endblock %}

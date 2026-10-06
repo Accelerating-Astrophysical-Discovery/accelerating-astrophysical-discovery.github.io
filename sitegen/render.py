@@ -12,6 +12,7 @@ from .content import ContentError, Member, SiteData, Writing
 def build_site(data: SiteData, root: Path, output: Path) -> None:
     root = root.resolve()
     output = output.resolve()
+    news = combined_news(data)
     _assert_safe_output(root, output)
     if output.exists():
         if not output.is_dir():
@@ -31,8 +32,17 @@ def build_site(data: SiteData, root: Path, output: Path) -> None:
     env.globals["site"] = data.config
 
     render_page(env, output / "index.html", "landing.html", active="home", page_path="/")
-    render_writing_section(env, output, "consortium", "Consortium", data.consortium)
-    render_writing_section(env, output, "news", "News", data.news)
+    render_writing_section(env, output, "news", "News", news)
+    render_page(
+        env, output / "consortium" / "index.html", "redirect.html",
+        active="news", title="News", page_path="/news/",
+    )
+    for item in data.consortium:
+        render_page(
+            env, output / "consortium" / item.slug / "index.html", "redirect.html",
+            active="news", title=item.title, page_path=f"/news/{item.slug}/",
+            social_type="article",
+        )
     render_page(
         env,
         output / "members" / "index.html",
@@ -52,6 +62,21 @@ def build_site(data: SiteData, root: Path, output: Path) -> None:
             active=slug, title=title, page_path=f"/{slug}/",
         )
     write_manifest(output, data)
+
+
+def combined_news(data: SiteData) -> list[Writing]:
+    # Keep source sections intact for asset URLs and existing comment threads,
+    # but publish every article under News. Reject collisions before writing.
+    items = data.news + data.consortium
+    slugs: set[str] = set()
+    for item in items:
+        if item.slug.casefold() in slugs:
+            raise ContentError(f"Duplicate News slug across source collections: {item.slug}")
+        slugs.add(item.slug.casefold())
+    return sorted(
+        items,
+        key=lambda item: (-item.date_published.toordinal(), item.title.casefold(), item.slug.casefold()),
+    )
 
 
 def _assert_safe_output(root: Path, output: Path) -> None:
@@ -144,7 +169,8 @@ def render_writing_section(
 def write_manifest(output: Path, data: SiteData) -> None:
     manifest = {
         "members": [member.slug for member in data.members],
-        "news": [item.slug for item in data.news],
+        "news": [item.slug for item in combined_news(data)],
+        # Retained for consumers of the original source-collection manifest.
         "consortium": [item.slug for item in data.consortium],
     }
     (output / "site-manifest.json").write_text(
