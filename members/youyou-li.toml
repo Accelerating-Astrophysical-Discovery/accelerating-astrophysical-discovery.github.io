@@ -1,0 +1,7 @@
+name = "Youyou Li"
+last_name = "Li"
+join_date = "2026-09-18"
+affiliations = ["University of Amsterdam", "University of Groningen"]
+research_areas = ["Multi-messenger astronomy", "High-energy astrophysics"]
+bio = "I am interested in high-energy astrophysics: Cosmic-rays, neutrino, and gamma-ray sources. I do simulation-based inference for multi-messenger astronomy."
+show_headshot = false
