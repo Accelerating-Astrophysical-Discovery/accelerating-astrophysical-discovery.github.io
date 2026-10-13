@@ -1,0 +1,7 @@
+name = "Angelo Caravano"
+last_name = "Caravano"
+join_date = "2026-10-13"
+affiliations = ["University of Amsterdam"]
+research_areas = ["Cosmology", "Theoretical Physics", "Particle Physics"]
+# Portrait source: https://www.origins-cluster.de/en/about-us/members/angelo-caravano
+bio = "I am a theoretical physicist working in the field of cosmology. My work focuses on developing new simulations and numerical tool for theoretical cosmology, with the goal of building connections between theory and observations."

@@ -1,0 +1,7 @@
+name = "Aleksandra Ciprijanovic"
+last_name = "Ciprijanovic"
+join_date = "2026-10-12"
+affiliations = ["Fermi National Accelerator Laboratory", "Department of Astronomy & Astrophysics University of Chicago", "NSF & Simons SkAI Institute"]
+research_areas = ["Robust AI and Domain Adaptation", "Uncertainty Quantification for AI", "Multimodal Learning", "Cosmology", "Galaxy Evolution", "High-energy Physics"]
+# Portrait source: https://astrophysics.uchicago.edu/people/profile/aleksandra-ciprijanovic/
+bio = "Aleksandra Ciprijanovic is a scientist at Fermilab specializing in artificial intelligence and machine learning for astrophysics, cosmology, and particle physics. Her research focuses on developing robust, interpretable, and uncertainty-aware AI methods that can generalize across diverse scientific datasets, enabling reliable scientific discovery from complex observational data and simulations."
