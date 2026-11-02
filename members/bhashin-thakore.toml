@@ -1,0 +1,8 @@
+name = "Bhashin A. Thakore"
+last_name = "Thakore"
+join_date = "2026-10-21"
+affiliations = ["University of Amsterdam", "University of Turin"]
+research_areas = ["Indirect DM search through large-scale structure cross-correlations", "Unresolved multiwavelength backgrounds", "Machine learning", "Prompt cusps", "Strong gravitational lensing of subhalos"]
+# Bio inferred, as requested, from publications in https://orcid.org/0009-0002-1871-6309
+# Portrait source: https://www.grappa.amsterdam/members/bhashin-ashish-thakore
+bio = "Bhashin A. Thakore studies dark matter and high-energy astrophysics, focusing on cross-correlations between the unresolved gamma-ray background and large-scale cosmic structure. This work investigates the sources of diffuse gamma-ray emission and possible dark matter contributions, including primordial black holes."
